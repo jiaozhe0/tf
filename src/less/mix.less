@@ -1,6 +1,7 @@
 @import  './less/variables.less';
 @import './less/mixins.less';
 
+@mColor:#3CAAE7;
 /*url("@{img}/slogan.png");*/
 @img:"../img"; 
 .size(@width; @height) {
@@ -61,4 +62,12 @@
     clear: both;
     
   }
+}
+
+.text-overflow(@display: block) {
+  display: @display;
+  word-wrap: normal; /* for IE */
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }

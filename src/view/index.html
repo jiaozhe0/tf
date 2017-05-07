@@ -30,7 +30,7 @@
         </li>
             <li class="navitem"><a class="nav-a " href="" target="_self"><span data-title="学员作品">高中辅导</span></a></li>
             <li class="navitem"><a class="nav-a " href="" target="_self"><span data-title="新闻资讯">聚优一对一</span></a></li>
-            <li class="navitem"><a class="nav-a " href="" target="_self"><span data-title="师资介绍">关于腾飞</span></a></li>
+            <li class="navitem"><a class="nav-a " href="about.html" target="_self"><span data-title="师资介绍">关于腾飞</span></a></li>
             <li class="navitem"><a class="nav-a " href="" target="_self"><span data-title="联系我们">最新活动</span></a></li>
           </ul>
     <div class="clear"></div>
@@ -40,14 +40,16 @@
 
 
 <div  class='banner-wrap'>
+<!-- style='position: fixed;z-index: -1' -->
   <div id="banner" >
         <section class="text-center banner_slogan center-block">
           <h1 data-am-scrollspy="{animation:'fade', repeat: false}">腾飞教育,十年积淀</h1>
           <p class="words">TENGFEIJIAOYU,SHINIANCHENGTEIAN </p>
           <!-- <div id='year'>2017</div> -->
         </section>
-
-        <canvas id="myChart" width="400" height="400"></canvas>
+        <div class="wrap">
+          <canvas id="myChart" width="1200" height="400"></canvas>
+        </div>
   </div>
 </div>
 
@@ -57,7 +59,10 @@
 <div id="class" class="wrap clearfix">
   <section class="class_item" data-am-scrollspy="{animation:'fade', delay: 300}">
     <a href="">
-    <h3 class="class_title">初中辅导<i class="iconfont">&#xe623;</i></h3>
+    <h3 class="class_title">初中辅导<i class="iconfont">&#xe623;</i>
+      
+    </h3>
+
     <div class="class_intro_wrap">
     <p class="class_intro">sdfsdfasf</p>
     <span>立即查看</span>
@@ -86,24 +91,22 @@
 
 <!-- --------------活动 ---------------- -->
 <div id="news" class="wrap clearfix">
-  <h3 class="comm_title ">
-      最新活动
-  </h3>
 
-    <ul id="myTab" class="nav nav-tabs">
-    <li class="active">
-        <a href="#home" data-toggle="tab"> 活动咨询 </a>
-    </li>
-    <li>
-      <a href="#ios" data-toggle="tab">教育新闻</a>
-    </li>
-    <li >
-        <a href="#jmeter" data-toggle="tab" >学习资料 </a>
-    </li>
-</ul>
-<div id="myTabContent" class="tab-content">
-    <div class="tab-pane fade in active clearfix" id="home">
-        <ul class="fl news_left_conent">
+<div class="comm_title text-center">
+  <h3> 最新活动 </h3> 
+  <div class="line"></div>
+  <p class="text-center e_title">NEWS</p>
+</div>
+
+<div class=" clearfix" id="home">
+ 
+  <div class="news_left_conent clearfix">
+    <div class="clearfix news_left_header">
+      <strong class="fl">精彩活动</strong>
+      <a href="" class="fr more">查看更多>></a>
+    </div>
+
+    <ul class="fl">
           <li class="news_items clearfix">
             <div class="news_date fl">
                 <span class="news_date_day">05</span>
@@ -130,48 +133,116 @@
                 2017-12
             </div>
             <div class="news_content fl ">
-              <h4 class="news_title">2017青岛市市北初三一模试卷汇总 </h4>
-              <p class='news_text'>2017市北一模真题2017市北一模真题2017市北一模真题2017市北一模真题2017市北一模真题2017市北一模真题2017市北一模真题2017市北一模真题2017市北一模真题2017市北一模真题</p>
-            </div>
-          </li> 
-
-          
-          
-        </ul>
-       
-        <figure class="fl news_center_conent">
-          <div class="img_wraper">
-            <img src="../img/cz.jpg" alt="" class="img-responsive">
-          </div>
-          <figcaption class="news_content news_img_content">
-            <h4 class="news_title">2017青岛市市北初三一模试卷汇总 </h4>
-              <!-- <p class='news_text'>2017市北一模真题2017市北一模真题2017市北一模真题2017市北一模真题2017市北一模真题2017市北一模真题2017市北一模真题2017市北一模真题2017市北一模真题2017市北一模真题</p> -->
-          </figcaption>
-        </figure>
-           
-        
-        <ul class="fl news_right_conent">
-        
-          <li class="news_items clearfix">
-            <div class="news_date fl">
-                <span class="news_date_day">05</span>
-                2017-12
-            </div>
-            <div class="news_content fl ">
-              <h4 class="news_title">2017青岛市市北初三一模试卷汇总 </h4>
-              <p class='news_text'>2017市北一模真题2017市北一模真题2017市北一模真题2017市北一模真题2017市北一模真题2017市北一模真题2017市北一模真题2017市北一模真题2017市北一模真题2017市北一模真题</p>
+              <a href="">
+                <h4 class="news_title">2017青岛市市北初三一模试卷汇总 </h4>
+                <p class='news_text'>2017市北一模真题2017市北一模真题2017市北一模真题2017市北一模真题2017市北一模真题2017市北一模真题2017市北一模真题2017市北一模真题2017市北一模真题2017市北一模真题</p>
+            </a>
             </div>
           </li>
-        
+    </ul>
+
+    <figure class="fr news_center_conent">
+    <a href="">
+        <div class="img_wraper">
+             <img src="../img/cz.jpg" alt="" class="img-responsive">
+        </div>
+      <figcaption class="news_content news_img_content">
+          <h4 class="news_title">2017青岛市市北初三一模试卷汇总 </h4>
+            <p class='news_text'>2017市北一模真题2017市北一模真题2017市北一模真题2017市北一模真题2017市北一模真题2017市北一模真题2017市北一模真题2017市北一模真题2017市北一模真题2017市北一模真题</p>
+       </figcaption>
+    </a>
+  </figure> 
+   </div>    
+ 
+           
+  <div class="fr news_right_conent">  
+      <div class="clearfix news_left_header">
+      <strong class="fl">新闻资讯</strong>
+      <a href="" class="fr more">查看更多>></a>
     </div>
-    <div class="tab-pane fade clearfix" id="ios">
-        <p>iOS 是一个由苹果公司开发和发布的手机操作系统。最初是于 2007 年首次发布 iPhone、iPod Touch 和 Apple
-            TV。iOS 派生自 OS X，它们共享 Darwin 基础。OS X 操作系统是用在苹果电脑上，iOS 是苹果的移动版本。</p>
-    </div>
-    <div class="tab-pane fade" id="jmeter">
-        <p>jMeter 是一款开源的测试软件。它是 100% 纯 Java 应用程序，用于负载和性能测试。</p>
-    </div>
+    <ul class="">
+          <li class="news_items clearfix">
+             <i class='news_iconfont'></i>2017青岛市市北初三一模试卷汇总 
+          </li>
+          <li class="news_items clearfix">
+            <a href=""><i class='news_iconfont'></i>2017青岛市市北初三一模试卷汇总 </a>
+          </li>
+          <li class="news_items clearfix">
+            <a href=""><i class='news_iconfont'></i> 2017青岛市市北初三一模试卷汇总</a>
+          </li>
+          <li class="news_items clearfix">
+            <a href=""> <i class='news_iconfont'></i>2017青岛市市北初三一模试卷汇总</a> 
+          </li>
+          <li class="news_items clearfix">
+           <a href=""> <i class='news_iconfont'></i>2017青岛市市北初三一模试卷汇总</a>青岛市市北初三一模试卷汇总青岛市市北初三一模试卷汇总青岛市市北初三一模试卷汇总<a href=""></a>
+          </li>
+          <li class="news_items clearfix">
+            <a href=""><i class='news_iconfont'></i> 2017青岛市市北初三一模试卷汇总</a>
+          </li>
+          <li class="news_items clearfix">
+             <i class='news_iconfont'></i>2017青岛市市北初三一模试卷汇总 
+          </li>
+          <li class="news_items clearfix">
+            <i class='news_iconfont'></i>2017青岛市市北初三一模试卷汇总 
+          </li>
+          <li class="news_items clearfix">
+            <i class='news_iconfont'></i> 2017青岛市市北初三一模试卷汇总
+          </li>
+          <li class="news_items clearfix">
+            <i class='news_iconfont'></i> 2017青岛市市北初三一模试卷汇总
+          </li>
+    </ul>
+  </div>
+ </div>
+
+  <div class="row activity">
+          <div class="col-33 activity_item">
+            <figure>
+            <a href="">
+              <div class="img_wrap">
+                <div class="mask"></div>
+                <img src="../img/cz.jpg" alt="" class="img-responsive">
+              </div>
+              <figcaption class='activity_content'>
+                <h4>可是你现在明白了，</h4>
+                <p>你得自己学着应付了你得自己学着应付了</p>
+              </figcaption>
+              </a>
+            </figure>
+          </div>
+           <div class="col-33 activity_item">
+            <figure>
+            <a href="">
+              <div class="img_wrap">
+                <div class="mask"></div>
+                <img src="../img/cz.jpg" alt="" class="img-responsive">
+              </div>
+              <figcaption class='activity_content'>
+                <h4>可是你现在明白了，</h4>
+                <p>你得自己学着应付了你得自己学着应付了</p>
+              </figcaption>
+              </a>
+            </figure>
+          </div>
+           <div class="col-33 activity_item">
+            <figure>
+            <a href="">
+              <div class="img_wrap">
+                <div class="mask"></div>
+                <img src="../img/new_bg.jpg" alt="" class="img-responsive">
+              </div>
+              <figcaption class='activity_content'>
+                <h4>可是你现在明白了，</h4>
+                <p>你得自己学着应付了你得自己学着应付了</p>
+              </figcaption>
+              </a>
+            </figure>
+          </div>
+          
+   </div>
 </div>
+  
+
       
 </div>
 
@@ -179,33 +250,38 @@
 <!-- --------------团队 ---------------- -->
 <div id="team">
   <div  class="wrap">
-    <h2 class="comm_title text-center">
-      师资介绍
-    </h2>
-    <ul class="clearfix">
-      <li class="team_item">
+    <div class="comm_title text-center">
+    <h3> 师资介绍 </h3> 
+    <div class="line"></div>
+    <p class="text-center e_title">NEWS</p>
+</div>
+    <ul class="clearfix row">
+      <li class="team_item col-25">
         <figure>
           <div class="img-wrap"><img src="../img/jiangpin.png" alt="" class="img-responsive"></div>
           <figcaption>
-            <p class="name">姓名：的说法</p>
+            <p class="name">的说法</p>
             <span class="post">sdfsdfsdf</span>
-            <p class="team_item_intro">简介</p>
+            <p class="team_item_intro">简介简介简介简介简介简介简介简介简介简介
+            简介简介简介简介简介简介简介简介简介简介
+
+            </p>
           </figcaption>
         </figure>
       </li>
-      <li class="team_item">
+      <li class="team_item col-25">
         <figure>
           <div class="img-wrap"><img src="../img/jiangpin.png" alt="" class="img-responsive"></div>
           <figcaption></figcaption>
         </figure>
       </li>
-      <li class="team_item">
+      <li class="team_item col-25">
         <figure>
           <div class="img-wrap"><img src="../img/jiangpin.png" alt="" class="img-responsive"></div>
           <figcaption></figcaption>
         </figure>
       </li>
-      <li class="team_item">
+      <li class="team_item col-25">
         <figure>
           <div class="img-wrap"><img src="../img/jiangpin.png" alt="" class="img-responsive"></div>
           <figcaption></figcaption>
@@ -215,34 +291,93 @@
   </div>
 </div>
 
-<div id="about">
-  <div class="about_top ">
-    <ul class="clearfix">
-      <li class="about_num">
-        <p class="iconfont">&#xe62e;</p>
-        <strong>1233</strong>
-      </li>
-      <li class="about_num">
-        <p class="iconfont">&#xe62e;</p>
-        <strong>1233</strong>
-      </li>
-      <li class="about_num">
-        <p class="iconfont">&#xe62e;</p>
-        <strong>1233</strong>
-      </li>
-      <li class="about_num">
-        <p class="iconfont">&#xe62e;</p>
-        <strong>1233</strong>
-      </li>
-    </ul>
-  </div>
-  <!-- <a href="" class="about_btn">进一步了解</a> -->
-  <div class="wrap text-center">
-       <h2 >关于腾飞</h2>
-       <p>关于腾飞关于腾飞关于腾飞关于腾飞关于腾飞关于腾飞关于腾飞关于腾飞关于腾飞关于腾飞关于腾飞关于腾飞</p>
+<div id="about">  
+  <div class="wrap text-center about_intro">
+      <h2 >关于腾飞</h2>
+      <p class='center-block about_intro_text'>关于腾飞关于腾飞关于腾飞关于腾飞关于腾飞关于腾飞关于腾飞关于腾飞关于腾飞关于腾飞关于腾飞关于腾飞
+       </p>
+       <a href="" class="about_btn">进一步了解</a>
     </div>
+
+      <div class="about_top text-center center-block">
+   <ul class="clearfix row">
+     <li class="about_num col-25">
+        <p class="iconfont ">&#xe615;</p>
+          <div class="">
+            <strong id='years'>10</strong>
+            <p class="about_tag">年教学经验</p>
+          </div>
+      </li>
+      <li class="about_num col-25">
+        <p class="iconfont ">&#xe664;</p>
+          <div class="">
+            <strong id='student'>40000</strong>
+            <p class="about_tag">名学生</p>
+          </div>
+      </li>
+      <li class="about_num col-25">
+        <p class="iconfont ">&#xe602;</p>
+          <div class="">
+            <strong id='school'>15</strong>
+            <p class="about_tag">所校区</p>
+          </div>
+      </li>
+      <li class="about_num col-25">
+        <p class="iconfont ">&#xe61a;</p>
+          <div class="">
+            <strong><span id="prob">95</span>%</strong>
+            <p class="about_tag">本科升学率</p>
+          </div>
+      </li>
+      
+    </ul> 
 </div>
 </div>
+
+
+<div id="timer_line" class="timer_line center-block">
+  <div class="comm_title text-center">
+    <h3> 发展历程 </h3> 
+    <div class="line"></div>
+    <p class="text-center e_title">History</p>
+  </div>
+ <ul class='row text-center no-gutter clearfix' >
+   <li class="time_item col-20 on">力学笃行</li>
+   <li class="time_item col-20">逆水行舟</li>
+   <li class="time_item col-20">一德一心</li>
+   <li class="time_item col-20">坚持不懈</li>
+   <li class="time_item col-20">众志成城</li>
+ </ul>
+
+  <div class="slider row text-center">
+      <div class="col-20 on timer_content">
+        <!-- <strong>力学笃行</strong> -->
+        <p>腾飞教育学校成立，获淄博市教育局办学免检单位<br>
+        2007年个性化教学中心成立，在校学习人数突破1500人，<br>
+        淄博市教育局优秀单位，2008年与高考阅卷组签约成立腾飞高考研究院</p>
+      </div>
+      <div class="col-20 timer_content">
+        <!-- <strong>逆水行舟 </strong> -->
+        <p>腾飞教育学校成立，获淄博市教育局办学免检单位，2007年个性化教学中心成立，在校学习人数突破1500人，淄博市教育局优秀单位，2008年与高考阅卷组签约成立腾飞高考研究院</p>
+      </div>
+      <div class="col-20 timer_content">
+        <!-- <strong>一德一心</strong> -->
+        <p>腾飞教育学校成立，获淄博市教育局办学免检单位，2007年个性化教学中心成立，在校学习人数突破1500人，淄博市教育局优秀单位，2008年与高考阅卷组签约成立腾飞高考研究院</p>
+      </div>
+     
+      <div class="col-20 timer_content">
+        <strong>众志成城</strong>
+        <p>腾飞教育学校成立，获淄博市教育局办学免检单位，2007年个性化教学中心成立，在校学习人数突破1500人，淄博市教育局优秀单位，2008年与高考阅卷组签约成立腾飞高考研究院</p>
+    </div>
+    <div class="col-20 timer_content">
+        <strong>众志成城</strong>
+        <p>腾飞教育学校成立，获淄博市教育局办学免检单位，2007年个性化教学中心成立，在校学习人数突破1500人，淄博市教育局优秀单位，2008年与高考阅卷组签约成立腾飞高考研究院</p>
+    </div>
+  </div>
+
+</div>
+
+
 <footer>
   <div class="wrap clearfix">
     <ul>
