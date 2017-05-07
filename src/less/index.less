@@ -1,4 +1,5 @@
 @import './mix.less';
+
 .banner-wrap{
   height: 660px;
   overflow: hidden;
@@ -56,6 +57,11 @@
   border:1px solid #ddd;
   height: 220px;
   cursor: pointer;
+ .transition(all 0.5s);
+  &:hover{
+  transform: translateY(-30px)!important;
+  box-shadow: 0px 12px 32px rgba(0, 0, 0, 0.1);
+}
  .class_title{
       width: 100%;
       height: 80px;
@@ -98,11 +104,7 @@
   }
  }
  
- &:hover{
-  .translate3d(0, -10px, 0);
-  .transition(all 0.5s);
-  box-shadow: 0px 12px 32px rgba(0, 0, 0, 0.1);
-}
+ 
 
   &:first-child {
     margin-left: 3%;
@@ -229,7 +231,7 @@
 }
 
 .activity{
-  margin: 30px 0;
+  margin:40px 0;
 }
 .activity_item{
   height: 280px;
@@ -330,12 +332,14 @@
 #about{
   position: relative;
   padding: 60px 0;
+  width: 100%;
+
 }
 .about_top{
   background: #4f98f1;
   color: #fff;
   height: 200px;
-  margin-top: -90px;
+  margin-top: -70px;
   z-index: 3px;
   position: relative;
   width: 900px!important;
@@ -393,22 +397,24 @@ li.about_num{
 }
 
 .about_intro{
+   padding-top: 10px;
   background-image: url(../img/bg.jpg);
-  background-position: center;
+  /*background-position: center;*/
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   .size(100%;300px);
   color: #fff;
   margin: 0;
   position: relative;
  .about_intro_text{
   width: 600px;
+  margin-top: -15px;
  }
  
 }
 
 .timer_line{
-  width: 1000px;
+  width: 1200px;
   margin-bottom: 60px;
   .no-gutter{
     overflow: visible;

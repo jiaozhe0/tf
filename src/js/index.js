@@ -1,7 +1,10 @@
 require('../less/common.less');
 require('../less/index.less');
+require('swiper/dist/css/swiper.min.css')
 
-var ScrollSpy = require('./common/ScrollSpy');
+var ScrollSpy = require('./common/ScrollSpy'),
+	Swiper = require('swiper');
+
 require('./common/tab');
 var Chart = require('./common/chart.js');
 var year = $('#years'),students = $('#student'),school=$('#school'),prob=$('#prob');
@@ -9,7 +12,6 @@ var timer = $('.timer_content'),timerLine = $('.time_item');
 
 (function(){
 		var index = 0,lTimer = null;
-		
 		timerLine.removeClass('on');
 		function slider(){
 			timerLine.removeClass('on');
@@ -38,22 +40,27 @@ var timer = $('.timer_content'),timerLine = $('.time_item');
 }())
 
 
-require(['tween.js','./common.js'], function (TWEEN) {
+require(['tween.js','./common.js',], function (TWEEN) {
 	var coords = { years: 0, students: 0,school:0,prob:0 };
 	var tween = new TWEEN.Tween(coords)
 		.to({ years: 10, students: 3990,school:15,prob:95  }, 1000)
 		.onUpdate(function() {
 			year.text(this.years.toFixed(0));
 			school.text(this.school.toFixed(0))
-		})
-		.start();
+		}) .start();
+		requestAnimationFrame(animate);
+		function animate(time) {
+			requestAnimationFrame(animate);
+			TWEEN.update(time);
+		}
+		// console.log(Swiper)
+		
 
-requestAnimationFrame(animate);
-
-function animate(time) {
-	requestAnimationFrame(animate);
-	TWEEN.update(time);
-}
+		var mySwiper = new Swiper ('.swiper-container', {
+		    // 如果需要前进后退按钮
+		    nextButton: '.swiper-button-next',
+		    prevButton: '.swiper-button-prev',
+ 		})
 });
 
 

@@ -3,7 +3,7 @@
 @import  './less/normalize.less';
 @import  './less/grid.less';
 @import  './utility.less';
-
+@import  './animation.less';
 /*@import  './animation.min.css';*/
 /*@import  './less/base.less';
 @import "less/content-block.less";
@@ -16,15 +16,16 @@
 /*@import  './less/sm.less';*/
 /*@import '../../node_modules/animate.css/animate.css';*/
 body{
+   
 	/*background-image: -webkit-radial-gradient(hsla(40,82%,3%,.9),hsla(0,100%,0%,.9));
     background-image: radial-gradient(hsla(40,82%,3%,.9),hsla(0,100%,0%,.9));*/
 
     /*background-image: -webkit-radial-gradient(hsla(120,70%,60%,.9),hsla(360,60%,60%,.9));  */
-
 }
 body,html,.page{
   overflow-x:hidden;
   font-size: 14px;
+
 }
 .page {
     background-image: -webkit-radial-gradient(hsla(0,0%,100%,.9),hsla(40,3%,82%,.9));
@@ -199,8 +200,7 @@ input, textarea {font-family: Arial, "微软雅黑";outline: 0;font-size: 14px;-
 /*é¦–é¡µå¹»ç¯é«˜åº¦*/
 
 
-#indexPage #mslider ul li div.sliderArrow { width: 650px; display: none; }
-#indexPage #mslider { height: 650px; }
+
 .content .header p.title { font-size: 32px; font-family: "HELVETICANEUELTPRO-THEX"; }
 .content .header p.subtitle { color: #8F8F8F; }
 .serviceitem div p.title { font-size: 18px; border-bottom: 0; font-family: "HELVETICANEUELTPRO-THEX", "å¾®è½¯é›…é»‘"; }
@@ -273,28 +273,30 @@ a{
 
 footer{
   background: #363636;
-.footer_nav{
-  float:left;
-  margin-right: 40px;
-  text-align: center;
-  color:#f3f3f3;
-  .footer_sub_nav{
-    font-size: 16px;
-    display: block;
-    margin-bottom:5px;
-    font-weight: normal;
-  }
+  color:rgb(180, 180, 180);
   li{
-    padding: 4px 0;
-  }
-  a{
-    color:#f3f3f3;
-    &:hover{
+      padding: 4px 0;
+    }
+  .footer_nav{
+    float:left;
+    margin-right: 40px;
+    text-align: center;
     
-    };
+    a{
+      color:rgb(180, 180, 180);
+    }
+    .footer_sub_nav{
+      font-size: 16px;
+      display: block;
+      margin-bottom:5px;
+      font-weight: normal;
+    }
   }
-}
-
+  .phone{
+    font-size: 32px;
+    font-weight: bold;
+    color: orange;
+  }
 }
 #copy{
   background: #323232;
@@ -440,4 +442,121 @@ figure{
 }
 .tab-content>.active {
     display: block;
+}
+
+/*回到顶部*/
+.deansidetools {
+    width: 60px;
+    z-index: 999999;
+    border: 1px solid #eff0f1;
+    position: fixed;
+    right:0;
+    top: 60%;
+    background: #fff;
+    .iconfont{
+      font-size: 20px;
+    }
+}
+.deansidetools ul{
+  padding-left:0;
+  margin-bottom: 0
+}
+.deansidetools ul li {
+  cursor: pointer;
+    display: block;
+    background: #fff;
+    text-align: center;
+    /*height: 60px;*/
+    border-bottom: 1px solid #eff0f1;
+    overflow: hidden;
+    color: #999;
+    width: 60px;
+}
+
+.deansidetools a{
+  color: #999;
+}
+.deansidetools a:hover{
+  color: #ef8304
+}
+.kefu_part {
+    position: relative;
+    z-index: 20;
+    display: block;
+    cursor: pointer;
+}
+.kefu_part_open {
+  background: #fff;
+    position: absolute;
+    /*overflow: hidden;*/
+    width: 218px;
+    height: 260px;
+    top: 0px;
+    left: -224px;
+    border: 1px solid #ddd;
+    display: none;
+    padding-right: 8px;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+.kefu_part_open:after{
+  position: absolute;
+  content: '';
+  width: 12px;
+  height: 80px;
+  background: transparent;
+  top:0;
+  right: -10px;
+  z-index: 999
+
+}
+.deansidetime{
+  font-size: 13px;
+}
+.deanonline{
+  margin-bottom: 10px;
+}
+.kefu_part_open p + p{
+    padding-top:10px;
+    border-top: 1px solid #eee
+}
+
+.deansidetools a.deanonline{
+  display: block;
+  border:1px solid #ef8304;
+  padding: 2px 5px;
+  border-radius: 3px;
+  width: 50%;
+  color: #ef8304;
+}
+.deansidetools a.deanonline:hover{
+  background: #ef8304;
+  color: #fff;
+}
+
+.weixin_part_open {
+    position: absolute;
+    overflow: hidden;
+    width: 166px;
+    height: 200px;
+    top: 0;
+    left: -170px;
+    display: none;
+    background: url('../img/sidebar_ewm_weixin.png') no-repeat center center;
+    padding-right: 8px;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+
+.weixin_part_box:hover  .weixin_part_open{
+  display: block;
+}
+.kefu_part_box:hover .kefu_part_open{
+  display: block;
 }
