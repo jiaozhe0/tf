@@ -72,17 +72,17 @@ var data = {
 	labels : [0,48,40,19,96,27,100,40,69,56,59,90,81,40,19,0],
 	datasets : [
 		{
-			fillColor : "rgba(220,220,220,0.8)",
+			fillColor : "rgba(81,187,229,0.8)",
 			strokeColor : "rgba(220,220,220,1)",
 			pointColor : "rgba(220,220,220,1)",
-			pointStrokeColor : "#fff",
+			// pointStrokeColor : "#fff",
 			data : [0,59,90,81,56,55,40,69,56,59,90,81,40,19,0]
 		},
 		{
 			fillColor : "rgba(79,152,241,.8)",
 			strokeColor : "rgba(151,187,205,1)",
 			pointColor : "rgba(151,187,205,1)",
-			pointStrokeColor : "#fff",
+			// pointStrokeColor : "#fff",
 			data : [0,48,40,19,96,27,100,40,69,56,59,90,81,40,19,0]
 		}
 	]
@@ -94,7 +94,7 @@ var d = new Chart(ctx).Line(data,{scaleShowLabels : false,
 	scaleLineWidth:0,
 	pointDotStrokeWidth:0,
 	datasetStrokeWidth:2,
-	pointDotRadius:5,
+	// pointDotRadius:5,
 	datasetStrokeWidth : 1
 	}
 );

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<div id="header" class="index_nav ">
+  <div class="content">
+  <h1 style="text-indent: -9999px;margin:0" >
+  腾飞教育
+  <a href="http://mo004_593.mo4.line1.uemo.net/" id="logo" >
+  <img src="../img/logo.png" height="40">
+  </a> 
+  </h1>
+    <ul id="nav" class="clearfix">
+            <li class="navitem">
+            <a class="nav-a  active " href="" target="_self">
+            <span data-title="首页">首页</span></a>
+            </li>
+            <li class="navitem">
+            <a class="nav-a " href="javascript:;" target=""><span data-title="关于我们">初中辅导</span>
+            <!-- <i class="fa fa-angle-down"></i> -->
+            </a>       
+             <!-- <ul class="subnav" style="top: 48px; left: -69px;">
+                    <li><a href="" target="_self"><span data-title="公司简介">公司简介</span><i class="fa fa-angle-right"></i></a></li>
+                    <li><a href="" target="_self"><span data-title="发展历程">发展历程</span><i class="fa fa-angle-right"></i></a></li>
+                  </ul> -->
+        </li>
+            <li class="navitem"><a class="nav-a " href="" target="_self"><span data-title="学员作品">高中辅导</span></a></li>
+            <li class="navitem"><a class="nav-a " href="" target="_self"><span data-title="新闻资讯">聚优一对一</span></a></li>
+            <li class="navitem"><a class="nav-a " href="" target="_self"><span data-title="师资介绍">关于腾飞</span></a></li>
+            <li class="navitem"><a class="nav-a " href="news_list" target="_self"><span data-title="联系我们">最新活动</span></a></li>
+          </ul>
+    <div class="clear"></div>
+  </div>
+  <a id="headSHBtn" href="javascript:;"><i class="fa fa-bars"></i></a>
+  </div>
+	<div style='height: 140px'></div>
+  <ol class="breadcrumb wrap">
+	    <li><a href="#">Home</a></li>
+	    <li><a href="#">2013</a></li>
+	    <li class="active">十一月</li>
+  </ol>
+	
+	<div id="course" class="wrap course" v-cloak>
+		<div class="course_wrap">
+			<div class="course_item clearfix" v-for='course in nav'>
+				<div class="fl course_nav_caption"><i></i>{{course.title}}</div>
+				<ul class="fl course_nav">
+					<li v-for='item in course.items' :class={'active':termId==item.id||sortId==item.id}>{{item.name}}</li>
+				</ul>
+			</div>
+			<!-- <div class="course_item">
+				<div class="fl course_nav_caption"><i></i>分类</div>
+				<ul class="fl course_nav">
+					<li v-for='course in courses'> {{course}}</li>
+				</ul>
+			</div>
+			<div class="course_item">
+				<div class="fl course_nav_caption"><i></i>科目</div>
+				<ul class="fl course_nav">
+					<li v-for='course in courses'> {{course}}</li>
+				</ul>
+			</div>
+			<div class="course_item">
+				<div class="fl course_nav_caption"><i></i>班型</div>
+				<ul class="fl course_nav">
+					<li v-for='course in courses'> {{course}}</li>
+				</ul>
+			</div> -->
+		</div>
+		<!-- <div class="row">
+			<div class="col-80">dd</div>
+			<div class="col-20">sdfs</div>
+		</div> -->
+		<div class="row course_content_wrap">
+			<ul class="course_content col-80">
+				<li class="course_content_item row" v-for='course in courses'>
+					<div class="col-80 row">
+						<div class="col-40 course_content_img">
+							<img :src="course.img" alt="" class="img-responsive">
+						</div>
+						<div class="col-60 course_content_info">
+							<h3>{{course.name}}</h3>
+							<ul>
+								<li>适用学生：{{course.student}}</li>
+								<li>开课日期：{{course.startTime}}上课时间：{{course.startTime}}</li>
+								<li>上课地点：{{course.add}}</li>
+								<li>课程简介：{{course.intro}}</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-20 course_btn_wrap">
+						<a :href="'course.html?id='+course.id" class="course_btn center-block ">查看详情</a>
+						<a href="" class="course_btn" id='appoint_btn'>立即预约</a>
+					</div>
+				</li>
+			</ul>
+			<aside class="col-20">
+				d
+			</aside>
+	</div>
+
+
+</div>
+</body>
+</html>
