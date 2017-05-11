@@ -1,5 +1,5 @@
 @import './mix.less';
-@import './mix.less';
+
 .news_left{
 	width: 68%!important; }
 .news_bg{
@@ -83,6 +83,7 @@
 		box-shadow: 2px 2px 10px rgba(208, 208, 208, .5);
 	}
 	.hot_items{
+		margin-top: 0;
 		padding: 15px ;
 		list-style: circle!important;
 		li{
@@ -97,14 +98,12 @@
 			margin-right: 10px;
 			font-size: 24px;
 			font-style: normal;
+			color: @mColor
 		}
 	}
 	.hot_title{
-		background: @mColor;
-		border-bottom-left-radius: 40px;
-		border-bottom-right-radius: 40px;
-		color: #fff;
-		text-align: center;
+		border-top:4px solid @mColor;
+		border-bottom: 1px solid #e7e7e7;
 		margin: 0;
 		padding:15px;
 		.hot_list{

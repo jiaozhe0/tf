@@ -45,37 +45,41 @@
 	
 	<div id="course" class="wrap course" v-cloak>
 		<div class="course_wrap">
-			<div class="course_item clearfix" v-for='course in nav'>
-				<div class="fl course_nav_caption"><i></i>{{course.title}}</div>
+			<div class="course_item clearfix" >
+				<div class="fl course_nav_caption"><i>学期</i></div>
 				<ul class="fl course_nav">
-					<li v-for='item in course.items' :class={'active':termId==item.id||sortId==item.id}>{{item.name}}</li>
+					<li v-for='item in term' :class={'active':termId==item.id} @click='choice(item.id)'>{{item.name}}</li>
 				</ul>
 			</div>
-			<!-- <div class="course_item">
+			<div class="course_item">
 				<div class="fl course_nav_caption"><i></i>分类</div>
 				<ul class="fl course_nav">
-					<li v-for='course in courses'> {{course}}</li>
+					<li v-for='item in sort' :class={'active':sortId==item.id} @click='choice(item.id)'> {{item.name}}</li>
+				</ul>
+			</div>
+			<div class="course_item">
+				<div class="fl course_nav_caption"><i></i>班级</div>
+				<ul class="fl course_nav">
+					<li v-for='item in classes' :class={'active':classId==item.id} @click='choice(item.id)'> {{item.name}}</li>
 				</ul>
 			</div>
 			<div class="course_item">
 				<div class="fl course_nav_caption"><i></i>科目</div>
 				<ul class="fl course_nav">
-					<li v-for='course in courses'> {{course}}</li>
+					<li v-for='item in subject'> {{item.name}}</li>
 				</ul>
 			</div>
 			<div class="course_item">
 				<div class="fl course_nav_caption"><i></i>班型</div>
 				<ul class="fl course_nav">
-					<li v-for='course in courses'> {{course}}</li>
+					<li v-for='item in type'> {{item.name}}</li>
 				</ul>
-			</div> -->
+			</div>
 		</div>
-		<!-- <div class="row">
-			<div class="col-80">dd</div>
-			<div class="col-20">sdfs</div>
-		</div> -->
+		
 		<div class="row course_content_wrap">
-			<ul class="course_content col-80">
+			
+			<ul class="course_content col-80" style="margin-top: 0">
 				<li class="course_content_item row" v-for='course in courses'>
 					<div class="col-80 row">
 						<div class="col-40 course_content_img">
@@ -97,10 +101,12 @@
 					</div>
 				</li>
 			</ul>
-			<aside class="col-20">
-				d
-			</aside>
-	</div>
+
+			<div class="col-20 ">
+				<div class="rec_course">
+						<h3 class="">在线咨询</h3>
+				</div>
+			</div>
 
 
 </div>

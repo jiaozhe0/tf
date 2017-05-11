@@ -31,11 +31,6 @@
   flex: @columns;
 }
 
-.img-responsive(@display: block) {
-  display: @display;
-  max-width: 100%; // Part 1: Set a maximum relative to the parent
-  height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
-}
 
 .width{
   width: 1200px;
@@ -70,4 +65,16 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+}
+.reset(){
+  margin:0;
+  padding:0
+}
+
+.img-responsive(@display: block) {
+  /*transtion:all 0.5s ease;*/
+  .transition(all 0.5s ease);
+  display: @display;
+  max-width: 100%; // Part 1: Set a maximum relative to the parent
+  height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
 }

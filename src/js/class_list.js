@@ -5,10 +5,8 @@ const Vue = require('vue');
 new Vue({
 	el:'#course',
 	data:{
-		nav:[{
-			title:'学期:',
-			items:[
-				{
+		term:[
+			   {
 					name:'不限',
 					id:'term-0'
 				},
@@ -32,10 +30,9 @@ new Vue({
 					name:'暑假',
 					id:'term-5'
 				}
-			]
-		},{
-			 title:'分类:',
-			 items:[{
+		],
+		sort:[
+			 {
 			 	name:"不限",
 			 	id:"sort-0"
 			 },{
@@ -45,12 +42,97 @@ new Vue({
 			 	name:"初中",
 			 	id:"sort-2"
 			 }
-			 ]
-		},{
-
-		},{
-
-		}],
+		],
+		classes:[
+			 {
+			 	name:"不限",
+			 	id:"class-0"
+			 },{
+			 	name:"四年级",
+			 	id:"class-1"
+			 },{
+			 	name:"五年级",
+			 	id:"class-2"
+			 },{
+			 	name:"初一",
+			 	id:"class-3"
+			 },{
+			 	name:"初二",
+			 	id:"class-4"
+			 },{
+			 	name:"初三",
+			 	id:"class-5"
+			 },{
+			 	name:"初四",
+			 	id:"class-6"
+			 }
+		],
+		subject:[
+			{
+			 	name:"不限",
+			 	id:"subject-0"
+			 },{
+			 	name:"语文",
+			 	id:"subject-1"
+			 },{
+			 	name:"数学",
+			 	id:"subject-2"
+			 },{
+			 	name:"英文",
+			 	id:"subject-3"
+			 },{
+			 	name:"物理",
+			 	id:"subject-4"
+			 },{
+			 	name:"化学",
+			 	id:"subject-5"
+			 },{
+			 	name:"生物",
+			 	id:"subject-6"
+			 },{
+			 	name:"地理",
+			 	id:"subject-7"
+			 },{		
+			 	name:"计算机",
+			 	id:"subject-8"
+			 }
+			 ],
+		type:[
+			{
+			 	name:"不限",
+			 	id:"type-0"
+			 },{
+			 	name:"全优讲堂",
+			 	id:"type-1"
+			 },{
+			 	name:"决胜中考班",
+			 	id:"type-2"
+			 },{
+			 	name:"火箭班",
+			 	id:"type-3"
+			 },{
+			 	name:"强化班",
+			 	id:"type-4"
+			 },{
+			 	name:"拔尖班",
+			 	id:"type-5"
+			 },{
+			 	name:"趣味课堂",
+			 	id:"type-6"
+			 },{		
+			 	name:"押题班",
+			 	id:"type-7"
+			 },{
+			 	name:"趣味课堂",
+			 	id:"type-8"
+			 },{
+			 	name:"提高班",
+			 	id:"type-9"
+			 },{		
+			 	name:"衔接班",
+			 	id:"type-10"
+			 }
+		],
 		courses:[
 			{
 				img:'../img/cz.jpg',
@@ -80,10 +162,46 @@ new Vue({
 
 	},
 	methods:{
-		Choice:function(id){
-			
+		choice:function(id){
+			var t = id.split('-');
+			switch(t[0]){
+				case 'term':
+					this.termId = id
+				break;
+				case 'sort':
+					this.sortId = id
+				break;
+				case 'class':
+					this.classId = id
+				break;
+				case 'subject':
+					this.subjectId = id
+				break;
+				defalut:
+					this.typeId = id
+				break;
+			}
+			// this.termId = id
+		},
+		getData:function(data){
+			var _this = this;
+			alert('dfdf')
+			$.get('www.baicu.com',function(data){
+				// _this.
+				alert('dfdf')
+			})	
 		}
 	},
+		computed:{
+
+		},
+		watch:{
+			termId:function(val){
+					this.getData()
+			}
+		},
+
+	
 	created:function(){
 
 	}
