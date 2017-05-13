@@ -1,14 +1,17 @@
 require('../less/common.less')
 require('../less/news.less')
+require('swiper/dist/css/swiper.min.css')
 
-// alert(jQuery(".focusBox"));
+var Swiper = require('swiper');
 
+  var mySwiper = new Swiper ('.swiper-container', {
+   	autoplay: 5000,
+    loop: true,
+    // 如果需要前进后退按钮
+    nextButton: '.swiper-button-next',
+    prevButton: '.swiper-button-prev',
 
-
-
-require(['jquery','./common/superslide.js'],function(jQuery){
-	
-	// alert('sfsdf')
-       jQuery(".focusBox").slide({ mainCell:".pic",effect:"left", autoPlay:true, delayTime:300});
-            
-})
+    // 如果需要滚动条
+    scrollbar: '.swiper-scrollbar',
+  })
+ 

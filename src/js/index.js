@@ -5,7 +5,6 @@ require('swiper/dist/css/swiper.min.css')
 var ScrollSpy = require('./common/ScrollSpy'),
 	Swiper = require('swiper');
 
-require('./common/tab');
 var Chart = require('./common/chart.js');
 var year = $('#years'),students = $('#student'),school=$('#school'),prob=$('#prob');
 var timer = $('.timer_content'),timerLine = $('.time_item');
