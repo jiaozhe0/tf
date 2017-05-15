@@ -2,10 +2,130 @@
 body{
 	background: #f9f9f9;
 }
+.advan_wrap{
+	background: #fff;
+	padding: 20px 20px 30px;
+	margin-bottom: 20px;
+	/*box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);*/
+}
+.comm_title{
+  
+  .e_title{
+   
+    font-size: 18px;
+    
+  }
+}
+.j_advan_wrap{
+	background: #f9f9f9;
+}
+.high_banner{
+	background-image: url(../img/h.jpg);
+	background-size: cover;
+	height: 440px;
+
+	.theme{
+		font-size: 34px;
+		font-weight: bold;
+		color: #333;
+		margin: 70px 0 5px 0;
+		.animation(am-slide-right 1s );
+		span{
+			color: #e3611a
+		}
+	}
+	.h_slogan{
+		background:#e07439;
+		font-size: 18px;
+		text-align: center;
+		padding: 5px 0;
+		color: #fff;
+		.animation(am-slide-right 1s );
+		span{
+			font-weight: bold;
+		}
+	}
+	.h_award{
+		.animation(am-slide-left 1s );
+		margin-top: 30px;
+		li{
+			list-style:inside;
+			font-size: 18px;
+			color: #666;
+			margin-bottom: 15px;
+		}
+	}
+}
+
+.junior_banner{
+	background-image: url(../img/j.jpg);
+	background-size: cover;
+	height: 436px;
+	color: #fff;
+	.j_banner_content{
+		margin-top: 100px;
+		/*.animation(am-slide-left 1s );*/
+		span{
+			font-size: 24px;
+			letter-spacing: 2px;
+			/*color: #cb640a;*/
+			font-weight: bold;
+			.animation(am-slide-top 1s );
+		}
+	}
+	.j_theme{
+		font-size: 44px;
+		font-weight: bold;
+		letter-spacing: 5px;
+		margin-bottom: 20px;
+		.animation(am-slide-top 1s );
+	}
+	.j_advantage>li{
+
+		display: inline-block;
+		padding: 4px 10px;
+		border: 2px solid #fff;
+		font-size: 18px;
+		/*color: #cb640a*/
+		.animation(am-slide-top 1s );
+		&{
+			+li{
+				margin-left: 10px;
+			}
+		} 
+	}
+}
+.advan-wrap{
+	color: #666;
+	font-size: 14px;
+}
+div.abvan_img{
+	background-image: url(../img/advantage.png);
+	.size(146px;157px);
+	.center-block();
+	 margin-bottom: 18px;
+}
+.adv_year{
+	background-position: 0 157px;
+}
+.adv_teacher{
+	background-position: -165px 157px;
+}
+.adv_check{
+	background-position: -330px 157px;
+}
+.adv_research{
+	background-position: -495px 157px;
+}
+.adv_tf{
+	background-position:146px 157px;
+}
+
 .course_item_title{
 	color: #fff;
 	padding: 15px;
-	height: 280px;
+	height: 260px;
+	width: 250px;
 	h3{
 		font-size: 30px;
 		margin-bottom: 5px;
@@ -19,7 +139,7 @@ body{
 	>li{
 		float: left;
 		width: 280px;
-		height: 280px;
+		height: 260px;
 		border-bottom:4px solid red;
 		margin:0 0px 30px 20px;
 		padding: 20px;
@@ -28,7 +148,7 @@ body{
     	overflow: hidden;
     	position: relative;	
     	&:hover .idea{
-			bottom:0;
+			bottom:-65%;
     	};
 
 	}
@@ -53,12 +173,26 @@ body{
 		position: absolute;
 		.transition(all 0.5s);
 		color: #fff;
-		padding: 20px;
+		padding: 30px 20px;
 		bottom:-100%;
 		left:0;
+		text-align: center;
 		h4{
 			font-size: 18px;
 			margin: 4px 0;
+		}
+		a{
+			display: inline-block;
+			color: #fff;
+			border: 1px solid #fff;
+			padding:4px  15px ;
+			border-radius: 8px;
+			margin: 5px;
+			&:hover{
+				background:#fff;
+				color: @mColor
+			};
+
 		}
 		
 	}
@@ -77,6 +211,19 @@ section.course_item{
 	};
 	&:nth-child(2){
 		.course_item_title{
+			background: #f68e42;
+		}
+		.course_item-list{
+			>li{
+				border-bottom-color: #f68e42;
+			}
+			.idea{
+				background: #f68e42;
+			}
+		}
+	};
+	&:nth-child(3){
+		.course_item_title{
 			background: #864295;
 		}
 		.course_item-list{
@@ -88,4 +235,199 @@ section.course_item{
 			}
 		}
 	};
+}
+
+.teach_system{
+	/*border: 2px solid #ddd;*/
+	height: 260px;
+	padding:0 15px;
+	color: #333;
+	font-size: 16px;
+	background: #fff;
+	color: #666;
+	box-shadow: 6px 0 15px #ebebeb, -6px 0 15px #ebebeb, 0 6px 15px #ebebeb, 0 -6px 15px #ebebeb;
+	h3{
+		/*color: @mColor;*/
+		font-size: 24px;
+		text-align: center;
+	}
+}
+
+.qy_wrap{
+	background: #fff;
+	padding: 30px 0 60px;
+	.row{
+		height: 420px;
+		padding-top: 70px;
+	}
+	.qy_btn{
+		.size(200px;45px);
+		/*background: */
+		border: 2px solid @mColor;
+		line-height: 45px;
+		color: @mColor;
+		font-size: 18px;
+		&:hover{
+			background:@mColor;
+			color: #fff;
+		};
+
+	}
+}
+div.j_adv_item{
+	border:1px solid #ddd;
+	text-align: center;
+	height: 280px;
+	padding: 0 15px;
+	.transition(all 0.3s ease);
+	color: #fff;
+	font-size: 16px;
+	.iconfont{
+		background: #fff;
+		.size(160px;160px);
+		.center-block();
+		border-radius: 50%;
+		line-height: 160px;
+		margin-top: -60px;
+		border: 3px solid #EC8B18;
+	}
+	&:first-child{
+		background: #EC8B18;
+		.iconfont{
+			color: #EC8B18;
+			border: 3px solid #EC8B18;
+		}
+	};
+	&:last-child{
+		background:#78A741;
+		.iconfont{
+			color: #78A741;
+			border: 3px solid #78A741;
+		}
+	};
+	&:nth-child(2){
+		background: #208BB9;
+		
+		.iconfont{
+			color:  #208BB9;
+			border: 3px solid #208BB9;
+		}
+	};
+	&:hover{
+		transform: translateY(-10px);
+	};
+	h3{
+		color: #fff;
+		font-size: 22px;
+		
+	}
+}
+
+
+/***********************************艺术生*/
+
+/*名师*/
+
+.teacher_wrap .team_item{
+	position: relative;
+	overflow: hidden;
+	height: 340px;
+	.teacher_intro{
+		.size(100%;100%);
+		position: absolute;
+		z-index: 9;
+		background: @mColor;
+		top:0;
+		/*left:-100%;*/
+		transform: translateY(-100%);
+		.transition(all 0.5s );
+		color: #fff;
+		padding: 15px;
+		h4{
+			margin-bottom: 5px;
+			font-size: 16px;
+		}
+	}
+	&:hover .teacher_intro{
+		transform: translateY(0);
+	};
+}
+
+.course_category{
+	background: #fff;
+	padding-bottom: 40px;
+}
+.category{
+	.category_item{
+		border: 1px solid #ddd;
+		min-height: 360px;
+		h3{
+			background: @mColor;
+			color: #fff;
+			width: 60%;
+			.center-block();
+			padding: 15px;
+		}
+	}
+}
+
+.shcool_wrap{
+	background: #fff;
+	min-height: 660px;
+}
+.art_advantage_wrap{
+	padding:20px 0 40px;
+	.row{
+		height: 370px;
+	}
+}
+.art_adv_item{
+	height: 345px;
+	background: #fff;
+	padding: 15px 25px;
+	box-shadow: 0px 8px 22px rgba(0, 0, 0, 0.1);
+	color: #666;
+	h3{
+		font-size: 24px;
+		color: #333;
+	}
+	.iconfont{
+		.size(140px;140px);
+		border-radius: 50%;
+		line-height: 140px;
+		color: #fff;
+		.transition(all 0.8s ease);
+	}
+
+	&:first-child{
+		.iconfont{
+			background: #FFC300;
+		}
+		&:hover .iconfont{
+			background: #fff;
+			color: #FFC300;
+			border: 3px solid #FFC300;
+		};
+	};
+	
+	&:nth-child(2){
+		.iconfont{
+			background: #00CDA4;
+		}
+		&:hover .iconfont{
+			background: #fff;
+			color: #00CDA4;
+			border: 3px solid #00CDA4;
+		};
+	}
+	&:last-child{
+		.iconfont{
+			background: #2DB8F4;
+		}
+		&:hover .iconfont{
+			background: #fff;
+			color: #2DB8F4;
+			border: 3px solid #2DB8F4;
+		};
+	}
 }
