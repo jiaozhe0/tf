@@ -52,7 +52,7 @@ var config ={
 				loader: 'file-loader?name=fonts/[name].[ext]'
 			}, {
 				test: /\.(png|jpe?g|gif)$/,
-				loader: 'url-loader?limit=8192&name=imgs/[name]-[hash].[ext]'
+				loaders: ['url-loader?limit=8192&name=imgs/[name]-[hash].[ext]','image-webpack']
 			}, {
               test: /\.js$/,
               loader: 'babel-loader',
