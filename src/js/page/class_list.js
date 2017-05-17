@@ -1,14 +1,17 @@
-require('../less/common.less');
-require('../less/class.less');
-const Vue = require('vue');
+require('../../less/common.less');
+require('../../less/class.less');
+// const Vue = require('vue');
+require('../common/ScrollSpy');
+require('./common.js');
 
-new Vue({
+require(['vue'],function($,Vue){
+	new Vue({
 	el:'#course',
 	data:{
 		term:[
 			   {
-					name:'不限',
-					id:'term-0'
+				   name:'不限',
+				   id:'term-0'
 				},
 				{
 					name:'全年',
@@ -152,6 +155,15 @@ new Vue({
 				intro:'专题强化，逐个攻破',
 				id:'d'
 			},
+			{
+				img:'../img/cz.jpg',
+				name:'小升初加强班',
+				student:'六年级学生',
+				startTime:'2015',
+				add:'张店区巴拉巴拉',
+				intro:'专题强化，逐个攻破',
+				id:'d'
+			},
 
 		],
 		termId:'term-0',
@@ -159,6 +171,8 @@ new Vue({
 		classId:'class-0',
 		subjectId:'subjectId-0',
 		typeId:'type-0',
+		formShow:false,
+		src:''
 
 	},
 	methods:{
@@ -185,24 +199,51 @@ new Vue({
 		},
 		getData:function(data){
 			var _this = this;
-			alert('dfdf')
-			$.get('www.baicu.com',function(data){
-				// _this.
-				alert('dfdf')
+			$.ajax({
+				url:'',
+				data:data,
+				success:function(){
+
+				}
 			})	
+		},
+		iShow(){
+			var h = $('body').height();
+			var wH=window.innerHeight,
+				sTop = document.body.scrollTop;
+			$('#mask').height(h).show();
+			$('#appointment_form').offset({
+				top: (wH-430)/2+sTop
+			})
+	
+			$('html').css('overflow','hidden')
+		},
+		hide(){
+			$('#mask').hide();
+			$('html').css('overflow','auto')
 		}
 	},
-		computed:{
+	computed:{
 
-		},
-		watch:{
-			termId:function(val){
-					this.getData()
-			}
-		},
+	},
+	watch:{
+		   termId:function(val){
+				this.getData({})
+		   },
+		   sortId:function(){
+
+		   }
+	},
+	mounted:function(){
+		
+	},
 
 	
 	created:function(){
 
+			$('#mask').height(document.body.scrollHeight+ document.body.scrollTop )
 	}
+})
+
+
 })

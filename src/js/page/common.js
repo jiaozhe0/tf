@@ -1,10 +1,11 @@
 
-define( function(fn){
+define( function(){
 	var header = $('#header'),top = $('#top')
 	
 	 top.click(function () {
 	     $("html, body").animate({scrollTop: 0}, 820)
 	 })
+	
 	 var $backToTopFun = function () {
 	     var st = $(document).scrollTop(), winh = $(window).height();
 		    if(st>100){
@@ -15,6 +16,9 @@ define( function(fn){
 				 top.hide()
 			}
  	};
+
  	$(window).on("scroll", $backToTopFun);
+ 	
+
 })
 

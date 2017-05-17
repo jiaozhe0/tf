@@ -1,13 +1,14 @@
 @import './mix.less';
 
 .banner-wrap{
-  height: 660px;
+  height: 860px;
   overflow: hidden;
   position: relative;
+  margin-top:40px;
 }
 
 #banner{
-  height: 660px;
+  height: 860px;
   width: 100%;
   background: -webkit-linear-gradient(left top, #277bdb , #30a7d8,#4ca5f5); /* Safari 5.1 - 6.0 */
   background: -o-linear-gradient(bottom right, #277bdb, #30a7d8,#4ca5f5); /* Opera 11.1 - 12.0 */
@@ -42,26 +43,33 @@
   background: #fff;
 }
 
-
-
+.art_advantage_wrap{
+  background: #f9f9f9;
+}
+.course_wrap{
+  height: 400px;
+}
 
 #class{
+  
   padding: 60px 0 0;
+  .row{
+    height: 300px;
+    padding-top: 30px;
+  }
 }
 
 .class_item{
-  float: left;
-  width: 30%;
-  margin: 0px 1%;
   background: #fff;
   border:1px solid #ddd;
   height: 220px;
   cursor: pointer;
+
  .transition(all 0.5s);
   &:hover{
- margin-top:-20px;
-  box-shadow: 0px 12px 32px rgba(0, 0, 0, 0.1);
-}
+       margin-top:-20px;
+      box-shadow: 0px 12px 32px rgba(0, 0, 0, 0.1);
+    }
  .class_title{
       width: 100%;
       height: 80px;
@@ -108,7 +116,6 @@
  
 
   &:first-child {
-    margin-left: 3%;
     h3{
      background:#2c9fb9;
     }

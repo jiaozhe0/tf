@@ -44,9 +44,11 @@
   </ol>
 	
 	<div id="course" class="wrap course" v-cloak>
-		<div class="mask">
-			<div class="appointment_form center-block">
+		<div class="mask"  id='mask' style="display:none;">
+			<div class="appointment_form center-block clearfix " id='appointment_form'>
+				<div class="close" id="close" @click='hide()'></div>
 				<h2>填写资料，免费体验课程</h2>
+				<div class="form_wrap fl">
 				<form action="">
 					<label for="">
 						<input type="text" placeholder="请输入姓名">
@@ -54,9 +56,26 @@
 					<label for="">
 						<input type="text" placeholder="请输入手机号">
 					</label>
+					<label for="">
+						<input type="text" placeholder="请输入所在学校">
+					</label>
+					
+					<select name="" id="">
+						<option value="">初一</option>
+						<option value="">初二</option>
+						<option value="">初三</option>
+						<option value="">初四</option>
+					</select>
+					<button type='button' class="apply_btn" id='apply_btn'>立即报名</button>
 				</form>
+				</div>
+				<div class="fr form_ewm">
+					<img src="" alt="">
+					<p>dsfsdfsdfsfsdsdf</p>
+				</div>
 			</div>
 		</div>
+
 		<div class="course_wrap">
 			<div class="course_item clearfix" >
 				<div class="fl course_nav_caption"><i>学期</i></div>
@@ -110,16 +129,19 @@
 					</div>
 					<div class="col-20 course_btn_wrap">
 						<a :href="'course.html?id='+course.id" class="course_btn center-block ">查看详情</a>
-						<a href="" class="course_btn" id='appoint_btn'>立即预约</a>
+						<a href="javascript:" class="course_btn appoint_btn" id='appoint_btn' @click='iShow()'>立即预约</a>
 					</div>
 				</li>
 			</ul>
 
-			<div class="col-20 ">
+			<div class="col-20 class_left">
+						<div class="icon"></div>
 				<div class="rec_course">
+						
 						<h3 class="">在线咨询</h3>
 
-						<a href="" class="online_btn">服务咨询</a>
+						<a href="" class="online_btn">
+						    <i class="iconfont">&#xe615;</i>服务咨询</a>
 
 						<div class="text-center">
 							其他联系方式
@@ -130,5 +152,8 @@
 
 </div>
 </div>
+		
+
+
 </body>
 </html>

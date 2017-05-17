@@ -5,6 +5,7 @@
 @import  './utility.less';
 @import  './animation.less';
 @import  './less/forms.less';
+
 /*@import  './animation.min.css';*/
 /*@import  './less/base.less';
 @import "less/content-block.less";
@@ -14,8 +15,7 @@
 @import  './less/lists.less';
 @import  './less/forms.less';*/
 /*@import  './less/scroller.less';*/
-/*@import  './less/sm.less';*/
-/*@import '../../node_modules/animate.css/animate.css';*/
+
 body{
    
 	/*background-image: -webkit-radial-gradient(hsla(40,82%,3%,.9),hsla(0,100%,0%,.9));
@@ -326,10 +326,10 @@ figure{
 }
 
 .common_banner{
-  .size(100%;300px);
+  .size(100%;360px);
  background-position: center;
  background-repeat: no-repeat;
- background-size: contain;
+ background-size: cover;
  margin-top:120px;
  /*border:1px solid red;*/
 }
@@ -632,5 +632,139 @@ figure{
   }
   .teacher-info{
     text-align: center;
+  }
+}
+.art_adv_item{
+  height: 345px;
+  background: #fff;
+  padding: 15px 25px;
+  box-shadow: 0px 8px 22px rgba(0, 0, 0, 0.1);
+  color: #666;
+  h3{
+    font-size: 24px;
+    color: #333;
+  }
+  .iconfont{
+    .size(140px;140px);
+    border-radius: 50%;
+    line-height: 140px;
+    color: #fff;
+    .transition(all 0.8s ease);
+  }
+
+  &:first-child{
+    .iconfont{
+      background: #FFC300;
+    }
+    &:hover .iconfont{
+      background: #fff;
+      color: #FFC300;
+      border: 3px solid #FFC300;
+    };
+  };
+  
+  &:nth-child(2){
+    .iconfont{
+      background: #00CDA4;
+    }
+    &:hover .iconfont{
+      background: #fff;
+      color: #00CDA4;
+      border: 3px solid #00CDA4;
+    };
+  }
+  &:last-child{
+    .iconfont{
+      background: #2DB8F4;
+    }
+    &:hover .iconfont{
+      background: #fff;
+      color: #2DB8F4;
+      border: 3px solid #2DB8F4;
+    };
+  }
+}
+
+.mask{
+  position: absolute;
+  .size(100%;100%);
+  top:0;
+  left: 0;
+  z-index: 999;
+  background: rgba(0,0,0,.6);
+  .appointment_form{
+    width: 760px;
+      height: 430px;
+      padding: 30px 50px;
+      margin: 0 auto;
+      position: relative;
+      background-color: #fff;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -o-border-radius: 10px;
+      border-radius: 10px;
+      -o-box-shadow: 0 0 8px rgba(0,0,0,.5);
+      -webkit-box-shadow: 0 0 8px rgba(0,0,0,.5);
+      -ms-box-shadow: 0 0 8px rgba(0,0,0,.5);
+      -moz-box-shadow: 0 0 8px rgba(0,0,0,.5);
+      box-shadow: 0 0 8px rgba(0,0,0,.5);
+  }
+  label{
+      display: block;
+        padding-top: 8px;
+      padding-bottom: 12px;
+      padding-left: 15px;
+      -webkit-border-radius: 20px;
+      -moz-border-radius: 20px;
+      -o-border-radius: 20px;
+      border-radius: 20px;
+          padding: 9px 10px;
+    position: relative;
+    border: solid 1px #ccc;
+    background-color: #fff;
+    margin-bottom: 15px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+  }
+  .form_wrap{
+    width: 60%;
+  }
+  select{
+    width: 100%;
+    height: 39px;
+    border: solid 1px #ccc;
+    color: rgb(51, 51, 51);
+    text-indent: 12px;
+    color: #B9B4BF;
+    outline: none;
+  }
+  .apply_btn{
+    display: block;
+    background: @mColor;
+    margin-top: 20px;
+    border-radius: 30px;
+    .size(200px;50px);
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+    .transition(all 0.5s);
+    &:hover{
+      background:darken(@mColor,10%);
+    };
+
+  }
+  .form_ewm{
+    border:1px solid red;
+    .size(34%;200px);
+  }
+  .close{
+    position: absolute;
+    .size(60px;60px);
+    background: red;
+    right: 10px;
+    top:10px;
   }
 }

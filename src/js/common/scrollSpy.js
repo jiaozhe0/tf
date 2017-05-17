@@ -1,8 +1,8 @@
 'use strict';
 
 // var $ = require('jquery');
-var UI = require('./core');
-
+// var UI = require('./core');
+require(['jquery','./core'],function($,UI){
 /**
  * @via https://github.com/uikit/uikit/blob/master/src/js/scrollspy.js
  * @license https://github.com/uikit/uikit/blob/master/LICENSE.md
@@ -13,11 +13,11 @@ var ScrollSpy = function(element, options) {
     return;
   }
 
+  //属性 options:参数 $element:元素 $window:  timer:
   this.options = $.extend({}, ScrollSpy.DEFAULTS, options);
   this.$element = $(element);
 
   var checkViewRAF = function() {
-    console.log('sf')
     UI.utils.rAF.call(window, $.proxy(this.checkView, this));
   }.bind(this);
 
@@ -49,6 +49,7 @@ ScrollSpy.prototype.checkView = function() {
   var animation = options.animation ?
   ' am-animation-' + options.animation : '';
 
+
   if (inView && !this.inViewState) {
     if (this.timer) {
       clearTimeout(this.timer);
@@ -67,16 +68,13 @@ ScrollSpy.prototype.checkView = function() {
         $element.addClass(options.className.inView + animation).width();
       }
     }, options.delay);
-
     this.inViewState = true;
     $element.trigger('inview.scrollspy.amui');
   }
 
   if (!inView && this.inViewState && options.repeat) {
     $element.removeClass(options.className.inView + animation);
-
     this.inViewState = false;
-
     $element.trigger('outview.scrollspy.amui');
   }
 };
@@ -96,3 +94,4 @@ UI.ready(function(context) {
 });
 
 module.exports = ScrollSpy;
+})

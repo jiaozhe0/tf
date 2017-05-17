@@ -10,7 +10,7 @@ var UglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
 var OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 //js入口文件
-var entries = getEntry('src/js/**/*.js','src/js/');
+var entries = getEntry('src/js/page/*.js','src/js/page/');
 var chunks = Object.keys(entries);
 
 if(process.env.NODE_ENV=='development'){
@@ -35,13 +35,13 @@ var config ={
 		        test: /\.css$/,
 		        use: ExtractTextPlugin.extract({
 		          fallback: "style-loader",
-		          use: "css-loader"
+		          use: "css-loader?importLoaders=1!postcss-loader"
 	       		})
       		},{
       			test: /\.less$/,
 		        use: ExtractTextPlugin.extract({
 		          fallback: "style-loader",
-		          use: "css-loader!less-loader"
+		          use: "css-loader!postcss-loader!less-loader"
 	       		})
 
       		},{
@@ -63,6 +63,7 @@ var config ={
 	plugins:[
 		new webpack.ProvidePlugin({
 			$:'jquery',
+			jQuery :'jquery'
 			// Zepto:'n-zepto'
 		}),
 		new CommonsChunkPlugin({
@@ -77,9 +78,20 @@ var config ={
 	        cssProcessorOptions: { discardComments: {removeAll: true } },
 	        canPrint: true
         }),
+        new UglifyJsPlugin({ //压缩代码
+          compress: {
+              warnings: false
+          },
+          except: ['$super', '$', 'exports', 'require'] //排除关键字
+      	}),
 		new webpack.HotModuleReplacementPlugin() //热加载
 
 	],
+	resolve: {
+	  alias: {
+	    'vue$': 'vue/dist/vue.common.js'
+	  }
+	}
 }
 
 

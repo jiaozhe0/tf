@@ -326,6 +326,20 @@ div.j_adv_item{
 
 /***********************************艺术生*/
 
+.art_banner{
+	background-image: url('../img/art1.jpg');
+	height: 440px;
+	.art_advantage{
+		margin-top: 300px;
+		li{
+			display: inline-block;
+			font-weight: bold;
+			font-size: 18px;
+			margin: 0 10px;
+		}
+	}
+}
+
 /*名师*/
 
 .teacher_wrap .team_item{
@@ -381,53 +395,4 @@ div.j_adv_item{
 		height: 370px;
 	}
 }
-.art_adv_item{
-	height: 345px;
-	background: #fff;
-	padding: 15px 25px;
-	box-shadow: 0px 8px 22px rgba(0, 0, 0, 0.1);
-	color: #666;
-	h3{
-		font-size: 24px;
-		color: #333;
-	}
-	.iconfont{
-		.size(140px;140px);
-		border-radius: 50%;
-		line-height: 140px;
-		color: #fff;
-		.transition(all 0.8s ease);
-	}
 
-	&:first-child{
-		.iconfont{
-			background: #FFC300;
-		}
-		&:hover .iconfont{
-			background: #fff;
-			color: #FFC300;
-			border: 3px solid #FFC300;
-		};
-	};
-	
-	&:nth-child(2){
-		.iconfont{
-			background: #00CDA4;
-		}
-		&:hover .iconfont{
-			background: #fff;
-			color: #00CDA4;
-			border: 3px solid #00CDA4;
-		};
-	}
-	&:last-child{
-		.iconfont{
-			background: #2DB8F4;
-		}
-		&:hover .iconfont{
-			background: #fff;
-			color: #2DB8F4;
-			border: 3px solid #2DB8F4;
-		};
-	}
-}
