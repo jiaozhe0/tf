@@ -9,11 +9,8 @@ body{
 	/*box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);*/
 }
 .comm_title{
-  
   .e_title{
-   
     font-size: 18px;
-    
   }
 }
 .j_advan_wrap{
@@ -192,7 +189,6 @@ div.abvan_img{
 				background:#fff;
 				color: @mColor
 			};
-
 		}
 		
 	}
@@ -219,6 +215,9 @@ section.course_item{
 			}
 			.idea{
 				background: #f68e42;
+				a:hover{
+					color: #f68e42;
+				};
 			}
 		}
 	};
@@ -232,6 +231,9 @@ section.course_item{
 			}
 			.idea{
 				background: #864295;
+				a:hover{
+					color: #864295;
+				};
 			}
 		}
 	};
@@ -260,19 +262,7 @@ section.course_item{
 		height: 420px;
 		padding-top: 70px;
 	}
-	.qy_btn{
-		.size(200px;45px);
-		/*background: */
-		border: 2px solid @mColor;
-		line-height: 45px;
-		color: @mColor;
-		font-size: 18px;
-		&:hover{
-			background:@mColor;
-			color: #fff;
-		};
-
-	}
+	
 }
 div.j_adv_item{
 	border:1px solid #ddd;
@@ -370,8 +360,10 @@ div.j_adv_item{
 .course_category{
 	background: #fff;
 	padding-bottom: 40px;
+
 }
 .category{
+	margin-bottom: 30px;
 	.category_item{
 		border: 1px solid #ddd;
 		min-height: 360px;
@@ -396,3 +388,121 @@ div.j_adv_item{
 	}
 }
 
+/*一对一*/
+.one_advantage_wrap{
+	.row{
+		height: auto;
+		margin-bottom: 30px;
+	}
+	.art_adv_item{
+		box-shadow: none;
+		border:1px solid #ddd;
+	    height: 240px;
+	}
+}
+
+.student_sort{
+	background: #fff;
+	padding: 60px  0; 
+}
+.sort_item{
+	height: 220px;
+	background: green;
+	margin-bottom: 20px;
+	font-size: 22px;
+	color: #fff;
+	width: 100%;
+	padding:80px 15px;
+	position: relative;
+	cursor: pointer;
+	.sort_item_content{
+		position: absolute;
+		.size(100%;100%);
+		background: #4E4E4E;
+		opacity: 0;
+		top:0;
+		left:0;
+		.transition(all 0.5s);
+		font-size: 14px;
+		padding: 15px;
+	}
+	&:hover .sort_item_content{
+		
+		opacity: 1
+	};
+}
+.sort_top .sort_item{
+	&:first-child{
+		background:#FF6652;
+	};
+	&:last-child{
+		background:#FFCD21;
+	};
+}
+.sort_bottom .sort_item{
+	&:first-child{
+		background:#83DD6F;
+	};
+	&:nth-child(2){
+		background:#60B7DF;
+	};
+	&:last-child{
+		background:#FF9639;
+	};
+}
+
+
+
+
+.case_banner{
+	background: url('../img/case.jpg');
+	height: 430px;
+}
+.case_list .row{
+	height: 370px;
+	margin-bottom: 20px;
+}
+.case_list_item{
+	background: #fff;
+	height: 360px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+	.case_list_item_right{
+		width: 60%;
+	}
+	.case_btn{
+		margin-top: 5px;
+		border-color: @mColor;
+		color: @mColor;
+		&:hover{
+			color: #fff;
+			background:  @mColor;
+		}
+	}
+	p{
+		background: @mColor;
+		color:#fff;
+		padding: 10px 15px;
+		margin: 0;
+		font-size: 18px;
+	}
+
+	li{
+		border-bottom: 1px dotted #e9e9e9;
+		padding: 8px 0;
+		height: auto;
+		&:last-child{
+			height:50px;
+		};
+		span{
+			display: inline-block;
+			margin-right: 20px;
+			
+		}
+		strong{
+			font-weight: normal;
+		}
+	}
+	ul{
+		padding:0 15px;
+	}
+}

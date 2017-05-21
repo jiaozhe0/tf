@@ -51,13 +51,13 @@
 				<div class="form_wrap fl">
 				<form action="">
 					<label for="">
-						<input type="text" placeholder="请输入姓名">
+						<input type="text" placeholder="请输入姓名" id=''>
 					</label>
 					<label for="">
-						<input type="text" placeholder="请输入手机号">
+						<input type="text" placeholder="请输入手机号" id=''>
 					</label>
 					<label for="">
-						<input type="text" placeholder="请输入所在学校">
+						<input type="text" placeholder="请输入所在学校" id=''>
 					</label>
 					
 					<select name="" id="">
@@ -110,8 +110,8 @@
 		</div>
 		
 		<div class="row course_content_wrap">
-			
-			<ul class="course_content col-80" style="margin-top: 0">
+			<div class="course_content col-80">
+			<ul  style="margin-top: 0">
 				<li class="course_content_item row" v-for='course in courses'>
 					<div class="col-80 row">
 						<div class="col-40 course_content_img">
@@ -134,9 +134,22 @@
 				</li>
 			</ul>
 
+				<div class="text-center">
+					<ul class="pagination ">
+						<li><a href="#">&laquo;</a></li>
+						<li class="active"><a href="#">1</a></li>
+						<li class=""><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">5</a></li>
+						<li><a href="#">&raquo;</a></li>
+					</ul>
+				</div>
+			</div>
+
 			<div class="col-20 class_left">
 						<div class="icon"></div>
-				<div class="rec_course">
+				<div class="rec_course rec_btn">
 						
 						<h3 class="">在线咨询</h3>
 
@@ -150,7 +163,9 @@
 			</div>
 
 
-</div>
+
+		</div>
+	
 </div>
 		
 

@@ -45,13 +45,12 @@ ul{
 
 @font-face {
   font-family: 'iconfont';  /* project id 293949 */
-  src: url('//at.alicdn.com/t/font_pwbgtbid2hi4fgvi.eot');
-  src: url('//at.alicdn.com/t/font_pwbgtbid2hi4fgvi.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_pwbgtbid2hi4fgvi.woff') format('woff'),
-  url('//at.alicdn.com/t/font_pwbgtbid2hi4fgvi.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_pwbgtbid2hi4fgvi.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_or5h3e1qeg0hpvi.eot');
+  src: url('//at.alicdn.com/t/font_or5h3e1qeg0hpvi.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_or5h3e1qeg0hpvi.woff') format('woff'),
+  url('//at.alicdn.com/t/font_or5h3e1qeg0hpvi.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_or5h3e1qeg0hpvi.svg#iconfont') format('svg');
 }
-
 .iconfont{
 	font-family: 'iconfont';
 	font-size: 80px;
@@ -276,7 +275,9 @@ a{
   margin-left: -1.1%!important;
 }
 
-
+i.iconfont{
+  font-style:normal;
+}
 /*底部*/
 
 footer{
@@ -499,10 +500,10 @@ figure{
   background: #fff;
     position: absolute;
     /*overflow: hidden;*/
-    width: 218px;
+    width: 305px;
     height: 260px;
     top: 0px;
-    left: -224px;
+    left: -308px;
     border: 1px solid #ddd;
     display: none;
     padding-right: 8px;
@@ -537,9 +538,9 @@ figure{
 .deansidetools a.deanonline{
   display: block;
   border:1px solid #ef8304;
-  padding: 2px 5px;
+  padding:10px 30px;
   border-radius: 3px;
-  width: 50%;
+  width: 76%;
   color: #ef8304;
 }
 .deansidetools a.deanonline:hover{
@@ -712,7 +713,7 @@ figure{
   label{
       display: block;
         padding-top: 8px;
-      padding-bottom: 12px;
+      padding-bottom:20px;
       padding-left: 15px;
       -webkit-border-radius: 20px;
       -moz-border-radius: 20px;
@@ -767,4 +768,127 @@ figure{
     right: 10px;
     top:10px;
   }
+}
+.qy_btn{
+    .size(200px;45px);
+    border: 2px solid @mColor;
+    line-height: 45px;
+    color: @mColor;
+    font-size: 18px;
+    &:hover{
+      background:@mColor;
+      color: #fff;
+    };
+  }
+
+  .case_list_item{
+  background: #fff;
+  height: 360px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+  .case_list_item_right{
+    width: 60%;
+  }
+  .case_btn{
+    margin-top: 5px;
+    border-color: @mColor;
+    color: @mColor;
+    &:hover{
+      color: #fff;
+      background:  @mColor;
+    }
+  }
+  p{
+    background: @mColor;
+    color:#fff;
+    padding: 10px 15px;
+    margin: 0;
+    font-size: 18px;
+  }
+
+  li{
+    border-bottom: 1px dotted #e9e9e9;
+    padding: 8px 0;
+    height: auto;
+    &:last-child{
+      height:50px;
+    };
+    span{
+      display: inline-block;
+      margin-right: 20px;
+      
+    }
+    strong{
+      font-weight: normal;
+    }
+  }
+  ul{
+    padding:0 15px;
+  }
+}
+
+.case_wrap .case_item{
+  border: 1px solid #ddd;
+ height: 380px;
+  h3{
+    margin: 0;
+    width: 100%!important;
+    background: @mColor;
+    color: #333;
+    font-size: 20px;
+    color: #fff;
+    padding: 12px 0;
+  }
+  .case_school{
+    font-size: 14px;
+    font-weight: normal;
+    margin:5px 0 0;
+  }
+  .case_describe{
+    color: #666;
+    .am-line-clamp(3);
+    padding: 0 14px;
+  }
+  .case_des_title{
+    color: @mColor;
+    font-weight: 400;
+    margin-right: 10px;
+
+  }
+  
+}
+.case_btn{
+    border: 1px solid  #999;
+    width: 50%;
+    margin-top: 30px;
+    padding: 8px;
+    .transition(all 0.5s);
+    &:hover{
+      border-color:@mColor;
+    };
+  }
+
+.case_info_wrap{
+  padding: 0 15px;
+}
+.table-condensed{
+  width: 100%;
+  .info_title{
+    text-align: right;
+    width: 100px; 
+  }
+  tr{
+    padding: 10px 0;
+    display: block;
+    border-bottom: 1px dotted #ddd;
+    border-width: 95%;
+  }
+  td{
+    display: inline-block;
+    width: 60px;
+    
+  }
+}
+
+.qy_btn{
+  margin: 0px auto;
 }

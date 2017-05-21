@@ -46,94 +46,60 @@
   <div class="wrap couse_info_wrap">
 	  <div class=" row course_content_wrap">
 				<article class="col-80">
-					<div class="course_content_item">
-							<div class="row">
-							<div class="col-80 row">
-								<div class="col-40 course_content_img">
-									<img :src="course.img" alt="" class="img-responsive">
-								</div>
-								<div class="col-60 course_content_info">
-									<h2>{{course.name}}</h2>
-									<ul>
-										<li>适用学生：{{course.student}}</li>
-										<li>开课日期：{{course.startTime}}上课时间：{{course.startTime}}</li>
-										<li>上课地点：{{course.add}}</li>
-									</ul>
-								</div>
-							</div>
-							<div class="col-20 course_btn_wrap">
-								<a :href="'course.html?id='+course.id" class="course_btn center-block ">查看详情</a>
-								<a href="javascript:" class="course_btn" id='appoint_btn'>立即预约</a>
+					<div class=" case_list_item">
+						<div class="fl case_photo text-center">
+							<div class="iconfont center-block">&#xe664;</div>
+							<h3>李浩然</h3>
 						</div>
+						<div class="fl  case_list_described">
+							<ul>
+								<li><strong>所在年级：</strong><div class="fr case_list_item_right">十一中</div>
+								</li>
+								<li><strong>就读学校：</strong><div class="fr case_list_item_right">十一中</div></li>
+								<li><strong>学习中心：</strong><div class="fr case_list_item_right">十一中</div></li>
+							</ul>
 						</div>
+						<div class="fl case_list_described">
+							<ul>
+								<li><strong>辅导科目：</strong><div class="fr case_list_item_right"><span>化学</span><span>数学</span></div></li>
+								<li><strong>入学成绩：</strong><div class="fr case_list_item_right"><span>15</span> <span>15</span></div></li>
+								<li><strong>提升后成绩：</strong><div class="fr case_list_item_right"><span>15</span> <span>15</span></div></li>
+							</ul>
+						</div>
+							
+
 					</div>
 						
-					<div class="course_info">
+					<div class="course_info case_info">
+						
 						<section>
-							<h3 class="title">课程安排</h3>
-							<ul class="schedule text-center clearfix">
-								<li>
-									<strong>第一课时</strong>
-									 2017-05-18 
-									 13:30-15:30	
-								</li>
-								<li>
-									<strong>第一课时</strong>
-									 2017-05-18 
-									 13:30-15:30
-								</li>
-								<li>
-									<strong>第一课时</strong>
-									 2017-05-18 
-									 13:30-15:30	
-								</li>
-								<li>
-									<strong>第一课时</strong>
-									 2017-05-18 
-									 13:30-15:30
-								</li>
-								<li>
-									<strong>第一课时</strong>
-									 2017-05-18 
-									 13:30-15:30	
-								</li>
-								<li>
-									<strong>第一课时</strong>
-									 2017-05-18 
-									 13:30-15:30
-								</li>
-								<li>
-									<strong>第一课时</strong>
-									 2017-05-18 
-									 13:30-15:30	
-								</li>
-								<li>
-									<strong>第一课时</strong>
-									 2017-05-18 
-									 13:30-15:30
-								</li>
-								<li>
-									<strong>第一课时</strong>
-									 2017-05-18 
-									 13:30-15:30	
-								</li>
-								<li>
-									<strong>第一课时</strong>
-									 2017-05-18 
-									 13:30-15:30
-								</li>
-								
-							</ul>
-						</section>
-						<section>
-							<h3 class="title">课程详情</h3>
+							<h3 class="title">学生情况和成果</h3>
 							<ul class="course_info_message">
 								<li>
-									<strong class='fl course_info_title'>课程描述</strong>
+									<strong class='fl course_info_title'>学员情况：</strong>
+									<p class='fl course_info_text'>高一到高二的衔接过渡期，巩固高一知识，进行补充练习，预习高二新知识，拓展强化，提前深谙学科重难点，活学活用，新高二告别两级分化，全力冲刺！
+									高一到高二的衔接过渡期，巩固高一知识，进行补充练习，预习高二新知识，拓展强化，提前深谙学科重难点，活学活用，新高二告别两级分化，全力冲刺！
+									</p>
+								</li>
+								<li>
+									<strong class='fl course_info_title'>辅导规划：</strong>
+									<p class='fl course_info_text'>高一到高二的衔接过渡期，巩固高一知识，进行补充练习，预习高二新知识，拓展强化，提前深谙学科重难点，活学活用，新高二告别两级分化，全力冲刺！</p>
+								</li>
+								
+								<li>
+									<strong class='fl course_info_title'>辅导时间：</strong>
+									<p class='fl course_info_text'>2012-20-1——2012-5</p>
+								</li>
+								<li>
+									<strong class='fl course_info_title'>辅导效果：</strong>
 									<p class='fl course_info_text'>高一到高二的衔接过渡期，巩固高一知识，进行补充练习，预习高二新知识，拓展强化，提前深谙学科重难点，活学活用，新高二告别两级分化，全力冲刺！</p>
 								</li>
 								<li>
-									<strong class='fl course_info_title'>课程描述</strong>
+									<strong class='fl course_info_title'>学生感言：</strong>
+									<p class='fl course_info_text'>高一到高二的衔接过渡期，巩固高一知识，进行补充练习，预习高二新知识，拓展强化，提前深谙学科重难点，活学活用，新高二告别两级分化，全力冲刺！</p>
+								</li>
+								<li>
+									<strong class='fl course_info_title'>家长感言：</strong>
 									<p class='fl course_info_text'>高一到高二的衔接过渡期，巩固高一知识，进行补充练习，预习高二新知识，拓展强化，提前深谙学科重难点，活学活用，新高二告别两级分化，全力冲刺！</p>
 								</li>
 
@@ -145,7 +111,7 @@
 				</article>
 
 				<aside class="col-20 ">
-					<div class="rec_course">
+					<div class="rec_course ">
 						<h3 class="c">推荐课程</h3>
 						<ul >
 							<li class="row">
@@ -217,40 +183,7 @@
 
 	  </div>
 </div>
-</div>
-<div class="mask"  id='mask' style="display:none;">
-			<div class="appointment_form center-block clearfix " id='appointment_form'>
-				<div class="close" id="close" @click='hide()'></div>
-				<h2>填写资料，免费体验课程</h2>
-				<div class="form_wrap fl">
-				<form action="">
-					<label for="">
-						<input type="text" name='name' placeholder="请输入姓名" id='name'>
-						<div class="error fr" style="display: none;color:red">姓名不到为空</div>
-					</label>
-					<label for="">
-						<input type="text" name='tel' placeholder="请输入手机号" id='tel'>
-						<div class="error fr" style="display: none;color:red">请输入正确的号码</div>
-					</label>
-					<label for="">
-						<input type="text" name='school' placeholder="请输入所在学校" id='school'>
-						<div class="error fr" style="display: none;color:red">请输入所在学校</div>
-					</label>
-					
-					<select name="class" id="classes">
-						<option value="">初一</option>
-						<option value="">初二</option>
-						<option value="">初三</option>
-						<option value="">初四</option>
-					</select>
-					<button type='button' class="apply_btn" id='apply_btn'>立即报名</button>
-				</form>
-				</div>
-				<div class="fr form_ewm">
-					<img src="" alt="">
-					<p>dsfsdfsdfsfsdsdf</p>
-				</div>
-			</div>
-		</div>
+
+
 </body>
 </html>
