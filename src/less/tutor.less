@@ -264,7 +264,8 @@ section.course_item{
 	}
 	
 }
-div.j_adv_item{
+
+.j_adv_item{
 	border:1px solid #ddd;
 	text-align: center;
 	height: 280px;
@@ -505,4 +506,106 @@ div.j_adv_item{
 	ul{
 		padding:0 15px;
 	}
+}
+
+
+/*全优课堂*/
+.class_stimulate_item{
+
+}
+
+.section1{
+	padding: 40px;
+	
+	/*color: #fff!important;*/
+	.wrap{
+		padding: 25px;
+	}
+	.row{
+		margin-bottom: 40px;
+		.col-50:last-child{
+			.teach_iteam{
+				border-left:none;
+				border-right:12px solid #EC8B18;
+				animation: am-slide-right  1s;
+			};
+		};
+	}
+	.comm_title{
+		h3{
+			font-size: 36px;
+		}
+		.e_title{
+			/*color: #fff;*/
+		}
+	}
+	.teach_iteam{
+		font-size: 18px;
+		background: #ddd;
+		color: #333;
+		text-align: center;
+		border-radius: 4px;
+		padding: 12px 20px;
+		width: 80%;
+		margin: 0;
+		border-left:12px solid #EC8B18;
+		animation: am-slide-left  1s;
+		/*border-right:10px solid #EC8B18;*/
+	}
+	.teach_iteam_index{
+		animation: am-scale-up 1s ;
+		.size(76px;76px);
+		border:5px solid #209BCF;
+		color: #209BCF;
+		border-radius: 50%;
+		font-size: 54px;
+		text-align: center;
+		line-height: 68px;
+		/*margin-right: 10px;*/
+	}
+	
+}
+
+.stimulate{
+	/*width: 60%;*/
+}
+.stimulate_title{
+	padding: 20px;
+	.stimulate_index{
+		font-size:50px;
+		font-weight: bold;
+		float: left;
+		margin-right: 20px;
+	}
+	.stimulate_text{
+		margin-top: 12px;
+		margin-left: 30px;
+		background: #EC8B18;
+		width: 65%;
+		padding: 8px;
+		font-size: 18px;
+		color: #fff;
+
+	}
+	&:first-child{
+		h2,.stimulate_index{
+			color: #EC8B18
+		}
+	};
+	&:nth-child(2){
+		h2,.stimulate_index{
+			color: #208BB9
+		}
+		.stimulate_text{
+			background: #208BB9
+		}
+	};
+	&:last-child{
+		h2,.stimulate_index{
+			color: #78A741
+		}
+		.stimulate_text{
+			background: #78A741
+		}
+	};
 }

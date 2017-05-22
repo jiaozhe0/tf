@@ -693,7 +693,20 @@ figure{
   left: 0;
   z-index: 999;
   background: rgba(0,0,0,.6);
-  .appointment_form{
+  .form_ewm{
+    border:1px solid red;
+    .size(34%;200px);
+  }
+  .close{
+    position: absolute;
+    .size(60px;60px);
+    background: red;
+    right: 10px;
+    top:10px;
+  }
+}
+
+.appointment_form{
     width: 760px;
       height: 430px;
       padding: 30px 50px;
@@ -719,7 +732,7 @@ figure{
       -moz-border-radius: 20px;
       -o-border-radius: 20px;
       border-radius: 20px;
-          padding: 9px 10px;
+     padding: 9px 10px;
     position: relative;
     border: solid 1px #ccc;
     background-color: #fff;
@@ -738,8 +751,9 @@ figure{
     border: solid 1px #ccc;
     color: rgb(51, 51, 51);
     text-indent: 12px;
-    color: #B9B4BF;
+    color: #666;
     outline: none;
+    font-size: 14px;
   }
   .apply_btn{
     display: block;
@@ -757,18 +771,6 @@ figure{
     };
 
   }
-  .form_ewm{
-    border:1px solid red;
-    .size(34%;200px);
-  }
-  .close{
-    position: absolute;
-    .size(60px;60px);
-    background: red;
-    right: 10px;
-    top:10px;
-  }
-}
 .qy_btn{
     .size(200px;45px);
     border: 2px solid @mColor;

@@ -5,6 +5,8 @@ var Chart = require('../common/chart.js');
 	 var Swiper = require('swiper');
 	 require('../common/ScrollSpy');
 	 require('./common.js');
+	 var show = require('../common/from.js');
+
 	
 require(['tween.js'], function (TWEEN) {
 	var year = $('#years'),h = parseInt(year.offset().top-400);
@@ -25,7 +27,10 @@ require(['tween.js'], function (TWEEN) {
 			TWEEN.update(time);
 		}
 	}
-	
+	$('#appoint_btn').click(function(){
+		
+		show.show();
+	})
 	
 	$(window).on("scroll", function(){
 		var ll = parseInt($(document).scrollTop());

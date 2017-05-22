@@ -6,7 +6,7 @@ require('./common.js');
 var show = require('../common/from.js');
 $(function(){
 	$('#appoint_btn').click(function(){
-		// alert('ddddddddddd');
+		
 		show.show();
 	})
 })
