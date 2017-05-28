@@ -39,53 +39,69 @@
   <a id="headSHBtn" href="javascript:;"><i class="fa fa-bars"></i></a>
   </div>
 
-
+ 
 <div  class='banner-wrap'>
 <!-- style='position: fixed;z-index: -1' -->
   <div id="banner" >
         <section class="text-center banner_slogan center-block">
-          <h1 data-am-scrollspy="{animation:'slide-top', repeat: false}">腾飞教育,十一年积淀</h1>
+          <h1 data-am-scrollspy="{animation:'slide-top', repeat: false}">腾飞教育,<span style="color:orange">十一</span>年积淀</h1>
           <p class="words" data-am-scrollspy="{animation:'slide-bottom', repeat: false}">TENGFEIJIAOYU,SHINIANCHENGTEIAN </p>
           <!-- <div id='year'>2017</div> -->
+         
+          <div class="shadow"></div>
         </section>
-        <div class="wrap">
+        <!-- <div class="wrap">
           <canvas id="myChart" width="1200" height="400"></canvas>
+        </div> -->
+      <div id="wave" style="height: 200px"></div>
+
+        <ul class="history_path  text-center ab-center wrap">
+          <li>
+              <div class="path_index center-block on"></div>
+               <h4>力学笃行</h4>
+               <p class="history_path_text">
+                 腾飞教育学校成立，获淄博市教育局办学免检单位<br>
+        2007年个性化教学中心成立，在校学习人数突破1500人，<br>
+        淄博市教育局优秀单位，2008年与高考阅卷组签约成立腾飞高考研究院
+               </p>
+          </li>
+          <li>
+              <div class="path_index center-block"></div>
+               <h4>逆水行舟</h4>
+               <p class="history_path_text">
+                 腾飞教育学校成立，获淄博市教育局办学免检单位，2007年个性化教学中心成立，在校学习人数突破1500人，淄博市教育局优秀单位，2008年与高考阅卷组签约成立腾飞高考研究院
+               </p>
+          </li>
+          <li>
+              <div class="path_index center-block"></div>
+               <h4>一德一心</h4>
+               <p class="history_path_text">
+                 腾飞教育学校成立，获淄博市教育局办学免检单位，2007年个性化教学中心成立，在校学习人数突破1500人，淄博市教育局优秀单位，2008年与高考阅卷组签约成立腾飞高考研究院
+               </p>
+          </li>
+          <li>
+              <div class="path_index center-block"></div>
+               <h4>坚持不懈</h4>
+               <p class="history_path_text">
+                 腾飞教育学校成立，获淄博市教育局办学免检单位，2007年个性化教学中心成立，在校学习人数突破1500人，淄博市教育局优秀单位，2008年与高考阅卷组签约成立腾飞高考研究院
+               </p>
+          </li>
+          <li>
+              <div class="path_index center-block"></div>
+               <h4>众志成城</h4>
+               <p class="history_path_text">
+                 腾飞教育学校成立，获淄博市教育局办学免检单位，2007年个性化教学中心成立，在校学习人数突破1500人，淄博市教育局优秀单位，2008年与高考阅卷组签约成立腾飞高考研究院
+               </p>
+          </li>
+        </ul>
+        <div id="wave" style="height: 210px">
+          
         </div>
   </div>
 </div>
 
 
 <div class="main">
-
-
-<!-- <div class="art_advantage_wrap">
-  <div class="wrap">
-  <div class="comm_title text-center">
-       <h3> 腾飞艺术生文化课教育 </h3> 
-      <div class="line"></div>
-      <p class="text-center e_title">
-        腾飞教育成立十几年，通过对1对1辅导的艺术生有上千名，文化通过率97%以上
-      </p>
-   </div>
-    <div class="row text-center course_wrap">
-      <div class="col-33 art_adv_item" data-am-scrollspy="{animation:'slide-left', repeat: false}">
-        <h3>初中辅导</h3>
-        <div class="iconfont center-block">&#xe647;</div>
-        <p>艺体生文化部事业立足艺考生培训7年，腾飞教育艺考生文化课管理中心率先在业内推出分层教育和分阶教育</p>
-      </div>
-      <div class="col-33 art_adv_item" data-am-scrollspy="{animation:'slide-left', repeat: false,delay:100}">
-        <h3>高中辅导</h3>
-        <div class="iconfont center-block"></div>
-        <p>137名优秀教师任教，154名全职员工维护</p>
-      </div>
-      <div class="col-33 art_adv_item" data-am-scrollspy="{animation:'slide-left', repeat: false,delay:100}">
-        <h3>聚优一对一</h3>
-        <div class="iconfont center-block"></div>
-        <p>学科内容聚优</p>
-      </div>
-    </div>
-  </div>
- </div> -->
 
 <!-- --------------课程 ---------------- -->
 <div class="class_wrap">
@@ -604,7 +620,7 @@
 </div>
 
 
-<div id="timer_line" class="timer_line center-block" data-am-scrollspy="{animation:'slide-bottom', repeat: false,delay: 50}">
+<!-- <div id="timer_line" class="timer_line center-block" data-am-scrollspy="{animation:'slide-bottom', repeat: false,delay: 50}">
   <div class="comm_title text-center">
     <h3> 发展历程 </h3> 
     <div class="line"></div>
@@ -620,17 +636,17 @@
 
   <div class="slider row text-center">
       <div class="col-20 on timer_content">
-        <!-- <strong>力学笃行</strong> -->
+        <!-- <strong>力学笃行</strong> 
         <p>腾飞教育学校成立，获淄博市教育局办学免检单位<br>
         2007年个性化教学中心成立，在校学习人数突破1500人，<br>
         淄博市教育局优秀单位，2008年与高考阅卷组签约成立腾飞高考研究院</p>
       </div>
       <div class="col-20 timer_content">
-        <!-- <strong>逆水行舟 </strong> -->
+       <strong>逆水行舟 </strong> 
         <p>腾飞教育学校成立，获淄博市教育局办学免检单位，2007年个性化教学中心成立，在校学习人数突破1500人，淄博市教育局优秀单位，2008年与高考阅卷组签约成立腾飞高考研究院</p>
       </div>
       <div class="col-20 timer_content">
-        <!-- <strong>一德一心</strong> -->
+        <!-- <strong>一德一心</strong>
         <p>腾飞教育学校成立，获淄博市教育局办学免检单位，2007年个性化教学中心成立，在校学习人数突破1500人，淄博市教育局优秀单位，2008年与高考阅卷组签约成立腾飞高考研究院</p>
       </div>
      
@@ -643,7 +659,7 @@
         <p>腾飞教育学校成立，获淄博市教育局办学免检单位，2007年个性化教学中心成立，在校学习人数突破1500人，淄博市教育局优秀单位，2008年与高考阅卷组签约成立腾飞高考研究院</p>
     </div>
   </div>
-</div>
+</div> -->
 
 <!-- <div class="wrap text-center" style="height: 600px;" >
   <div class="comm_title text-center">
@@ -701,7 +717,7 @@
    </div>
 
 
-<iframe src="map.html" frameborder="0" style="display: block; width: 100%;height: 400px;" scrolling="no"></iframe>
+<iframe src="map.html" frameborder="0" style="display: block; width: 100%;height: 380px;" scrolling="no"></iframe>
 </div>
 </div>
 <footer>

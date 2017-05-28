@@ -42,7 +42,9 @@ body,html,.page{
 ul{
 	padding-left: 0
 }
-
+img{
+  float: none!important;
+}
 @font-face {
   font-family: 'iconfont';  /* project id 293949 */
   src: url('//at.alicdn.com/t/font_or5h3e1qeg0hpvi.eot');
@@ -103,6 +105,9 @@ input, textarea {font-family: Arial, "微软雅黑";outline: 0;font-size: 14px;-
   float: left;
   margin-right: 50px;
   margin: 0px;
+  img{
+    float: left!important;
+  }
 }
 
 #header.mini {
@@ -696,13 +701,18 @@ figure{
   .form_ewm{
     border:1px solid red;
     .size(34%;200px);
+    img{
+      float: none;
+    }
   }
   .close{
     position: absolute;
     .size(60px;60px);
-    background: red;
+    font-size:50px;
+    color:#666;
     right: 10px;
     top:10px;
+    cursor: pointer;
   }
 }
 

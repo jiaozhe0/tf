@@ -8,14 +8,153 @@
 }
 
 #banner{
-  height: 860px;
+  height: 840px;
+  padding-top: 180px;
   width: 100%;
-  background: -webkit-linear-gradient(left top, #277bdb , #30a7d8,#4ca5f5); /* Safari 5.1 - 6.0 */
-  background: -o-linear-gradient(bottom right, #277bdb, #30a7d8,#4ca5f5); /* Opera 11.1 - 12.0 */
-  background: -moz-linear-gradient(bottom right, #277bdb, #30a7d8,#4ca5f5); /* Firefox 3.6 - 15 */
-  background: linear-gradient(to bottom right, #277bdb , #30a7d8,#4ca5f5); /* 标准的语法（必须放在最后） */ 
-  padding-top: 200px;
+     background-color: #4f7f9b;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#4f7f9b), to(#293c55));
+    background-image: -webkit-linear-gradient(top, #4f7f9b, #293c55);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#4f7f9b), to(#293c55));
+    background-image: linear-gradient(to bottom, #4f7f9b, #293c55);
+  background-image: linear-gradient(to bottom, #4f7f9b, #293c55);
+  border:1px solid red;
 }
+.shadow{
+  background: url('../img/shadow.png') center center no-repeat ;
+  height: 984px;
+  height: 74px;
+  background-size: cover;
+}
+.history_path{
+  position:absolute;
+  height:400px;
+  bottom:10px;
+  z-index: 66;
+  color: #fff;/*
+  padding: 20px 8%;*/
+  li{
+    position: absolute;
+   .size(20%;300px);
+   &:nth-child(2){
+      left:20%;
+      top: 140px;
+      .history_path_text{
+        top:-220px;
+      }
+    }
+     &:first-child{
+      top:70px;
+    }
+   &:nth-child(3){
+      left:40%;
+      top:10px;
+    }
+   &:nth-child(4){
+      left:60%;
+      top:90px;
+       .history_path_text{
+        top:-200px;
+      }
+    }
+   &:last-child{
+      left:80%;
+       top:40px;
+      
+    }
+  } 
+  h4{
+    font-size: 20px;
+    font-weight: normal;
+    margin-top: 10px;
+    color: #ddd;
+    margin-bottom: 10px;
+  }
+  .history_path_text{
+    padding: 15px;
+    text-align: left;
+    background: rgba(0,0,0,.5);
+    border-radius: 5px;
+    display: none;
+    margin-top: 0px;
+    .size(210px;185px);
+    /*height: 140px;*/
+    position: absolute;
+    .ab-center();
+  }
+  .on{
+    color: red;
+    background:orange!important;
+  }
+  .ons{
+    color: orange!important;
+  }
+  .path_index{
+      width: 20px;
+      height: 20px;
+      background: #fff;
+      border-radius: 50%;
+      position: relative;
+      cursor: pointer;
+      margin: 0 auto;
+    &:after{
+      content: '';
+      display: block;
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      top:0;
+      left: 0;
+      background: green;
+      background: rgba(0,0,0,.3);
+      z-index: -1;
+      transition:all 0.5s;
+      border-radius: 50%;
+      animation: wave-animate 3s 1.5s infinite ease-out;
+     }
+     &:before{
+      content: '';
+      display: block;
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      top:0;
+      left: 0;
+      background: green;
+      background: rgba(255,255,255,.3);
+      z-index: -1;
+      transition:all 0.5s;
+      border-radius: 50%;
+      animation: wave-animate 3s 3s infinite ease-out;
+     }
+  }
+
+}
+
+  @keyframes wave-animate {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+    transform-origin: center;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0.3;
+    transform-origin: center;
+  }
+}
+@-weblit-keyframes wave-animate {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+    transform-origin: center;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+    transform-origin: center;
+  }
+}
+
 #year{
   font-size: 140px;
   position: absolute;
@@ -26,16 +165,17 @@
 .banner_slogan{
   animation: fadeInUp 1s ease;
     color:#fff;
-    width: 600px;
+    width: 650px;
     position: relative;
    &>h1{
-    font-size: 38px;
+    font-size: 52px;
     margin-bottom: 0px;
     letter-spacing: 15px;
    } 
    .words{
      margin-top: 5px;
      letter-spacing: 10px;
+     font-size: 16px;
    }
 }
 
@@ -439,7 +579,7 @@ li.about_num{
   }
 }
 .contact_form{
-  height: 400px;
+  height: 380px;
   position: relative;
   margin: 30px auto;
   .wrap{
@@ -447,12 +587,18 @@ li.about_num{
   }
   .appointment_form{
     position: absolute;
-    height: 420px;
-    top:-10px;
+    height: 380px;
     width: 500px;
     box-shadow: none;
     background: rgba(255,255,255,.8);
     
   }
 
+}
+
+.case_wrap{
+  padding: 30px 0;
+  .qy_btn{
+    margin-top:20px;
+  }
 }

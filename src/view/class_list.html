@@ -46,21 +46,26 @@
 	<div id="course" class="wrap course" v-cloak>
 		<div class="mask"  id='mask' style="display:none;">
 			<div class="appointment_form center-block clearfix " id='appointment_form'>
-				<div class="close" id="close" @click='hide()'></div>
+				<div class="close iconfont" id="close" @click='hide()'>
+					&#xe6b4;
+				</div>
 				<h2>填写资料，免费体验课程</h2>
 				<div class="form_wrap fl">
 				<form action="">
 					<label for="">
-						<input type="text" placeholder="请输入姓名" id=''>
+						<input type="text" name='name' placeholder="请输入姓名" id='name'>
+						<div class="error fr" style="display: none;color:red">姓名不到为空</div>
 					</label>
 					<label for="">
-						<input type="text" placeholder="请输入手机号" id=''>
+						<input type="text" name='tel' placeholder="请输入手机号" id='tel'>
+						<div class="error fr" style="display: none;color:red">请输入正确的号码</div>
 					</label>
 					<label for="">
-						<input type="text" placeholder="请输入所在学校" id=''>
+						<input type="text" name='school' placeholder="请输入所在学校" id='school'>
+						<div class="error fr" style="display: none;color:red">请输入所在学校</div>
 					</label>
 					
-					<select name="" id="">
+					<select name="class" id="classes">
 						<option value="">初一</option>
 						<option value="">初二</option>
 						<option value="">初三</option>
@@ -69,7 +74,7 @@
 					<button type='button' class="apply_btn" id='apply_btn'>立即报名</button>
 				</form>
 				</div>
-				<div class="fr form_ewm">
+				<div class="fr form_ewm text-center">
 					<img src="" alt="">
 					<p>dsfsdfsdfsfsdsdf</p>
 				</div>
