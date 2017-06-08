@@ -52,7 +52,7 @@ var config ={
 				loader: 'file-loader?name=fonts/[name].[ext]'
 			}, {
 				test: /\.(png|jpe?g|gif)$/,
-				loaders: ['url-loader?limit=8192&name=imgs/[name]-[hash].[ext]','image-webpack']
+				loaders: ['url-loader?limit=8192&name=imgs/[name]-[hash].[ext]']
 			}, {
               test: /\.js$/,
               loader: 'babel-loader',
@@ -78,12 +78,12 @@ var config ={
 	        cssProcessorOptions: { discardComments: {removeAll: true } },
 	        canPrint: true
         }),
-        new UglifyJsPlugin({ //压缩代码
-          compress: {
-              warnings: false
-          },
-          except: ['$super', '$', 'exports', 'require'] //排除关键字
-      	}),
+       //  new UglifyJsPlugin({ //压缩代码
+       //    compress: {
+       //        warnings: false
+       //    },
+       //    except: ['$super', '$', 'exports', 'require'] //排除关键字
+      	// }),
 		new webpack.HotModuleReplacementPlugin() //热加载
 
 	],
