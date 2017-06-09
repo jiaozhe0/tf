@@ -13,8 +13,6 @@ var OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 var entries = getEntry('src/js/page/*.js','src/js/page/');
 var chunks = Object.keys(entries);
 
-if(process.env.NODE_ENV=='development'){
-}
 
 var p = process.env.NODE_ENV == 'development' ? '/dist/' : '../';
 console.log('-----------------------------'+p+'-----------------')
@@ -78,12 +76,12 @@ var config ={
 	        cssProcessorOptions: { discardComments: {removeAll: true } },
 	        canPrint: true
         }),
-       //  new UglifyJsPlugin({ //压缩代码
-       //    compress: {
-       //        warnings: false
-       //    },
-       //    except: ['$super', '$', 'exports', 'require'] //排除关键字
-      	// }),
+        new UglifyJsPlugin({ //压缩代码
+          compress: {
+              warnings: false
+          },
+          except: ['$super', '$', 'exports', 'require'] //排除关键字
+      	}),
 		new webpack.HotModuleReplacementPlugin() //热加载
 
 	],
@@ -93,6 +91,9 @@ var config ={
 	  }
 	}
 }
+
+
+
 
 
 // html文件
