@@ -45,18 +45,24 @@ ul{
 img{
   float: none!important;
 }
-@font-face {
-  font-family: 'iconfont';  /* project id 293949 */
-  src: url('//at.alicdn.com/t/font_or5h3e1qeg0hpvi.eot');
-  src: url('//at.alicdn.com/t/font_or5h3e1qeg0hpvi.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_or5h3e1qeg0hpvi.woff') format('woff'),
-  url('//at.alicdn.com/t/font_or5h3e1qeg0hpvi.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_or5h3e1qeg0hpvi.svg#iconfont') format('svg');
+
+
+@font-face {font-family: "iconfont";
+  src: url('./font/iconfont.eot?t=1496964177870'); /* IE9*/
+  src: url('./font/iconfont.eot?t=1496964177870#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('./font/iconfont.woff?t=1496964177870') format('woff'), /* chrome, firefox */
+  url('./font/iconfont.ttf?t=1496964177870') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('./font/iconfont.svg?t=1496964177870#iconfont') format('svg'); /* iOS 4.1- */
 }
-.iconfont{
-	font-family: 'iconfont';
-	font-size: 80px;
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size: 80px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
 
 .comm_title{
 	font-size: 32px;

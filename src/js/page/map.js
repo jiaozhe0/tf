@@ -1,1 +1,2 @@
-map.js
+require('../common/ScrollSpy');
+require('./common.js');

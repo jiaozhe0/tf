@@ -1,7 +1,7 @@
 require('../../less/common.less');
 require('../../less/index.less');
 require('swiper/dist/css/swiper.min.css')
-var echarts = require('echarts');
+// var echarts = require('echarts');
 	 var Swiper = require('swiper');
 	 require('../common/ScrollSpy');
 	 require('./common.js');
@@ -84,77 +84,77 @@ var mySwiper = new Swiper ('.swiper-container', {
 			})
 		})
 	
-function drawCanvasOne() {
-	var t = document.getElementById("wave"),
-		e = echarts.init(t),
-		i = e.getZr(),
-		a = e.getWidth(),
-		c = e.getHeight(),
-		o = new echarts.graphic.Group;
-	i.add(o);
-	var n = 3;
-	800 > a && (n = 2);
-	for (var r = 0; 3 > r; r++) {
-		for (var s = [], l = 0; n + 1 >= l; l++) {
-			var h = c / 10 * r + c / 6,
-				d = Math.random() * c / 8 + h,
-				g = c - Math.random() * c / 8 - h,
-				m = [
-					[2 * l * a / n / 2, r % 2 ? d : g],
-					[(2 * l + 1) * a / n / 2, r % 2 ? g : d]
-				];
-			s.push(m[0], m[1])
-		}
-		console.log(s.toString())
-		var u = new echarts.graphic.Polyline({
-			shape: {
-				points: r==1 ? s : s,
-				smooth: .4
-			},
-			style: {
-				stroke: "#fff",
-				opacity: 1 / (r + 1),
-				lineWidth: 1.2 / (r + 1) + .8
-			},
-			silent: !0,
-			position: [-r * a / 8, 35 * -(r - .5)]
-		}),
-			y = new echarts.graphic.Rect({
-				shape: {
-					x: 0,
-					y: 0,
-					width: 0,
-					height: c
-				},
-				position: [r * a / 8, 0]
-			});
-		o.add(u), y.animateTo({
-			shape: {
-				width: a
-			}
-		}, 2e3, 800 * Math.random()), u.setClipPath(y), n += 1
-	}
-	// $(window).on("resize", function() {
-	// 	var t = e.getWidth(),
-	// 		i = e.getHeight();
-	// 	e.resize();
-	// 	var a = e.getWidth(),
-	// 		c = e.getHeight();
-	// 	y.setShape({
-	// 		width: a,
-	// 		height: c
-	// 	});
-	// 	var n = a / t,
-	// 		r = c / i;
-	// 	o.eachChild(function(t) {
-	// 		t.position[0] *= n, t.position[1] *= r, t.shape.points.forEach(function(t) {
-	// 			t[0] *= n, t[1] *= r
-	// 		}), t.dirty(!0)
-	// 	})
-	// })
-}
+// function drawCanvasOne() {
+// 	var t = document.getElementById("wave"),
+// 		e = echarts.init(t),
+// 		i = e.getZr(),
+// 		a = e.getWidth(),
+// 		c = e.getHeight(),
+// 		o = new echarts.graphic.Group;
+// 	i.add(o);
+// 	var n = 3;
+// 	800 > a && (n = 2);
+// 	for (var r = 0; 3 > r; r++) {
+// 		for (var s = [], l = 0; n + 1 >= l; l++) {
+// 			var h = c / 10 * r + c / 6,
+// 				d = Math.random() * c / 8 + h,
+// 				g = c - Math.random() * c / 8 - h,
+// 				m = [
+// 					[2 * l * a / n / 2, r % 2 ? d : g],
+// 					[(2 * l + 1) * a / n / 2, r % 2 ? g : d]
+// 				];
+// 			s.push(m[0], m[1])
+// 		}
+// 		console.log(s.toString())
+// 		var u = new echarts.graphic.Polyline({
+// 			shape: {
+// 				points: r==1 ? s : s,
+// 				smooth: .4
+// 			},
+// 			style: {
+// 				stroke: "#fff",
+// 				opacity: 1 / (r + 1),
+// 				lineWidth: 1.2 / (r + 1) + .8
+// 			},
+// 			silent: !0,
+// 			position: [-r * a / 8, 35 * -(r - .5)]
+// 		}),
+// 			y = new echarts.graphic.Rect({
+// 				shape: {
+// 					x: 0,
+// 					y: 0,
+// 					width: 0,
+// 					height: c
+// 				},
+// 				position: [r * a / 8, 0]
+// 			});
+// 		o.add(u), y.animateTo({
+// 			shape: {
+// 				width: a
+// 			}
+// 		}, 2e3, 800 * Math.random()), u.setClipPath(y), n += 1
+// 	}
+// 	// $(window).on("resize", function() {
+// 	// 	var t = e.getWidth(),
+// 	// 		i = e.getHeight();
+// 	// 	e.resize();
+// 	// 	var a = e.getWidth(),
+// 	// 		c = e.getHeight();
+// 	// 	y.setShape({
+// 	// 		width: a,
+// 	// 		height: c
+// 	// 	});
+// 	// 	var n = a / t,
+// 	// 		r = c / i;
+// 	// 	o.eachChild(function(t) {
+// 	// 		t.position[0] *= n, t.position[1] *= r, t.shape.points.forEach(function(t) {
+// 	// 			t[0] *= n, t[1] *= r
+// 	// 		}), t.dirty(!0)
+// 	// 	})
+// 	// })
+// }
 
-drawCanvasOne()
+// drawCanvasOne()
 
 
 });

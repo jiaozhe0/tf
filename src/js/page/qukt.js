@@ -1,6 +1,9 @@
 require('../../less/common.less');
 require('../../less/tutor.less');
 var fullpage = require('fullpage.js');
+require('../common/ScrollSpy');
+require('./common.js');
+
 /*!
  * fullpage 1.4.0
  * Author: 抹桥 <yq12315@gmail.com>(http://www.kisnows.com)

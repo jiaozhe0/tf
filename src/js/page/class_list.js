@@ -198,13 +198,13 @@ require(['vue','../common/from.js'],function(Vue,show){
 			}
 			// this.termId = id
 		},
-		getData:function(data){
+		getData:function(){
 			var _this = this;
 			$.ajax({
 				url:'',
-				data:data,
-				success:function(){
-
+				data:this.param,
+				success:function(data){
+					// _this.courses = data;
 				}
 			})	
 		},
@@ -225,18 +225,30 @@ require(['vue','../common/from.js'],function(Vue,show){
 		}
 	},
 	computed:{
+		param(){
+			var data = {
+				term:this.termId,
+				sortId:this.sortId,
+				classId:this.classId,
+				subjectId:this.subjectId,
+				typeId:this.typeId,
+			}
 
+			return  data
+		}
 	},
 	
 	watch:{
-		   termId:function(val){
-				this.getData({})
+		   termId:function(){
+				this.getData()
+				console.log('cs'+this.param.term);
 		   },
 		   sortId:function(){
-
+		   		this.getData()
 		   }
 	},
 	mounted:function(){
+		
 		var mask = $('#mask'),html = $('html'),applyBtn = $('#apply_btn'),
 		form=$('form'),close = $('#close'),f = form[0];
 		var name = form.find('#name'),tel=form.find('#tel'),school=form.find('#school'),classes=$('#classes');
